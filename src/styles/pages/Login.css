@@ -1,0 +1,11 @@
+.page {
+  padding: 0 2rem;
+}
+.header {
+  padding: 3rem 0 1rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

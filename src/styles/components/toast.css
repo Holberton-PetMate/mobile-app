@@ -1,0 +1,30 @@
+.toastContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.toast {
+  width: 90%;
+  position: absolute;
+  top: 2rem;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  transition: 2ms;
+}
+.toast .textContainer {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.toast.success {
+  background-color: #1acc99;
+}
+.toast.error {
+  background-color: #f64949;
+}

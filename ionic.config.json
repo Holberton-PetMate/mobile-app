@@ -1,0 +1,15 @@
+{
+  "name": "ionic-app-base",
+  "integrations": {
+    "capacitor": {},
+    "enterprise": {
+      "keyId": 8031,
+      "productKey": "key_98315d7429d945c8bd33c9fad23ac2d8",
+      "appId": "8292cbd0",
+      "registries": [
+        "@ionic-enterprise;https://registry.ionicframework.com/"
+      ]
+    }
+  },
+  "type": "react"
+}

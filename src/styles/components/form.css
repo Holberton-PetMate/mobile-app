@@ -1,0 +1,41 @@
+.labeledTextField {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 1.5rem;
+}
+.labeledTextField > label {
+  width: fit-content;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+.labeledTextField > input {
+  padding: 1rem;
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  color: #021e2a;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid transparent;
+  outline: none;
+}
+input:focus-visible {
+  background-color: white;
+  border-color: #3171e0;
+}
+.labeledTextField > input.error {
+  background-color: white;
+  border-color: #f64949;
+}
+.errorMessage {
+  position: absolute;
+  bottom: -1.3rem;
+  margin: 0.3rem 0.4rem;
+  color: #f64949;
+  font-size: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+}

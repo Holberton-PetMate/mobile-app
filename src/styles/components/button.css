@@ -1,0 +1,15 @@
+.button.primary {
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  background-color: #3880ff;
+  border-radius: 0.4rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+.button.primary:hover {
+  background-color: #3171e0;
+}
+.button.primary:disabled {
+  background-color: #808289;
+}
