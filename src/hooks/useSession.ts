@@ -29,14 +29,14 @@ const useCurrentUser = () => {
     if (refetch) {
       try {
         // here we should add the first requests the app needs
-        const { data, status } = await Users.getCurrent();
-        if (status === 200) {
-          await store.set("user", data.user);
-          await store.set("token", data.token);
-        } else {
-          throw new Error();
-        }
-        console.log({ data });
+        // const { data, status } = await Users.getCurrent();
+        // if (status === 200) {
+        //   await store.set("user", data.user);
+        //   await store.set("token", data.token);
+        // } else {
+        //   throw new Error();
+        // }
+        // console.log({ data });
       } catch (err: any) {
         throw new Error("Couldn't refetch");
       }

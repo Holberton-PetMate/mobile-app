@@ -17,15 +17,18 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 /* Theme variables */
-import "./theme/variables.css";
+import "./layouts/variables.css";
 
 import { IonReactRouter } from "@ionic/react-router";
 import { Route } from "react-router";
+import Settings from "./pages/SettingsPage";
+import Progress from "./pages/ProgressPage";
+import Records from "./pages/RecordsPage";
 import Login from "./pages/Login";
-import MainLayout from "./theme/MainLayout";
 import Index from "./pages/Index";
 import { SessionProvider } from "./hooks/useSession";
 import { ToastProvider } from "./hooks/useToast";
+import MyPetMatesPage from "./pages/MyPetMatesPage";
 
 setupIonicReact();
 
@@ -37,7 +40,10 @@ const App: React.FC = () => {
           <IonReactRouter>
             <IonRouterOutlet>
               <Route path="/" component={Index} exact />
-              <Route path="/dashboard" render={() => <MainLayout />} />
+              <Route path="/my-petmates" render={() => <MyPetMatesPage />} />
+		      <Route path="/dashboard/:petmate_id/settings" component={Settings} />
+              <Route path="/dashboard/:petmate_id/progress" component={Progress} />
+              <Route path="/dashboard/:petmate_id/records" component={Records} />
               <Route path="/login" component={Login} />
             </IonRouterOutlet>
           </IonReactRouter>

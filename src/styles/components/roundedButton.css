@@ -1,0 +1,13 @@
+.roundedButton {
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	box-shadow: 2px 4px 7px -1px rgba(122,122,122,0.75);
+	margin-top: 1rem;
+	background-color: #462016;
+	border: none;
+	border-radius: 100%;
+}

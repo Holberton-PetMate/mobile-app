@@ -1,15 +1,14 @@
+import { PropsWithoutRef } from "react";
 import "../../styles/components/fonts.css";
 
-interface H1Props {
+interface H1Props extends PropsWithoutRef<JSX.IntrinsicElements["h1"]> {
   dark?: boolean;
 }
 
-const H1: React.FC<H1Props> = ({ children, dark = false }) => (
+const H1 = ({ children, ...rest }: H1Props) => (
   <h1
     className="h1"
-    style={{
-      color: dark ? "white" : "black",
-    }}
+    {...rest}
   >
     {children}
   </h1>
