@@ -1,0 +1,12 @@
+.recordCard {
+	width: 100%;
+	padding: 1rem 0.5rem;
+    background: rgb(228, 226, 226);
+    display: flex;
+	justify-content: space-between;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.date, .notification {
+    width: 45%;
+}

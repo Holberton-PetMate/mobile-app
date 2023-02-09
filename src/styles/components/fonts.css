@@ -1,11 +1,26 @@
 .h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 1.2rem;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 600;
+	line-height: 3rem;
+	letter-spacing: 0.5px;
+}
+.h2 {
   margin: 0;
-  padding: 0;
-  font-size: 1.2rem;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
-  line-height: 3rem;
-  letter-spacing: 0.5px;
+  font-family: "Hind", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+.h3 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 .small {
   margin: 0;
@@ -26,12 +41,5 @@
   font-family: "Hind", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 500;
-}
-.h2 {
-  margin: 0;
-  font-family: "Hind", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
   font-weight: 500;
 }
