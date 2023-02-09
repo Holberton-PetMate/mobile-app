@@ -1,7 +1,6 @@
 import { PropsWithoutRef } from "react";
 import "../styles/components/recordsCard.css";
-import { Body } from "./fonts";
-import { Edit } from "./Icons";
+import { Small } from "./fonts";
 
 interface RecordsProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 	date: string;
@@ -10,13 +9,9 @@ interface RecordsProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 
 const RecordsCard = ({date, notification}:RecordsProps) => {
 	return (
-		<div className="message-panel">
-			<div className="message">
-				<ul className="message-content">
-					<li className="date">{date}</li>
-					<li className="notification">{notification}</li>
-				</ul>
-			</div>
+		<div className="recordCard">
+			<Small otherClasses="date">{date}</Small>
+			<Small otherClasses="notification">{notification}</Small>
 		</div>
 	);
 };

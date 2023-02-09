@@ -1,14 +1,8 @@
-import { PropsWithoutRef } from "react";
 import RecordsCard from "./RecordsCard";
-import { useHistory } from "react-router";
 import "../styles/components/recordsList.css";
+import H3 from "./fonts/H3";
 
-interface RecordsListProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
-
-}
-
-const RecordsList = ({}:RecordsListProps) => {
-	const history = useHistory();
+const RecordsList = () => {
 	const records = [
 		{
 			date: "08-02-2023 15:34:00",
@@ -22,15 +16,19 @@ const RecordsList = ({}:RecordsListProps) => {
 			date: "08-02-2023 15:25:00",
 			notification: "Full stock"
 		}
-	]
+	];
+
 	return (
 		<div className="recordsList">
+			<div className="titleHedings">
+				<H3>Date</H3>
+				<H3>Notification</H3>
+			</div>
 			{records.map(item => (
 				<RecordsCard 
 					date={item.date}
 					notification={item.notification}
 					key={item.date}
-					onClick={() => history.push("/dashboard/1/progress")}
 				/>
 			))}
 		</div>

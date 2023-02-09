@@ -2,14 +2,20 @@ import { PropsWithoutRef } from "react";
 
 interface SmallProps extends PropsWithoutRef<JSX.IntrinsicElements["small"]> {
   dark?: boolean;
+  otherClasses?: string
 }
 
-const Small: React.FC<SmallProps> = ({ children, dark = false, ...rest }) => (
+const Small: React.FC<SmallProps> = ({
+	children,
+	otherClasses,
+	dark = false, 
+	...rest 
+}) => (
   <small
     {...rest}
-    className="small"
+    className={`small ${otherClasses}`}
     style={{
-      color: dark ? "#92949c" : "#92949c",
+      color: dark ? "#fff" : "#000",
     }}
   >
     {children}
