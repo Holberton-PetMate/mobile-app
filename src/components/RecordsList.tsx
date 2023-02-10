@@ -1,19 +1,26 @@
 import RecordsCard from "./RecordsCard";
 import "../styles/components/recordsList.css";
 import H3 from "./fonts/H3";
+import dayjs from 'dayjs';
+
+var localizedFormat = require('dayjs/plugin/localizedFormat')
+dayjs.extend(localizedFormat);
+
+// to check the actual date and compare with every string "date"...
+//const today = new Date();
 
 const RecordsList = () => {
 	const records = [
 		{
-			date: "08-02-2023 15:34:00",
+			date: (dayjs("08-02-2023 15:34:00").format("dddd, MMM D - h:mm A")).toString(),
 			notification: "Empty stock"
 		},
 		{
-			date: "08-02-2023 15:30:00",
+			date: (dayjs("08-02-2023 15:30:00").format("dddd, MMM D - h:mm A")).toString(),
 			notification: "Food dispensed ok"
 		},
 		{
-			date: "08-02-2023 15:25:00",
+			date: (dayjs("08-02-2023 15:25:00").format("dddd, MMM D - h:mm A")).toString(),
 			notification: "Full stock"
 		}
 	];
