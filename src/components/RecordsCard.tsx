@@ -7,7 +7,7 @@ interface RecordsProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 	notification: string
 }
 
-const RecordsCard = ({date, notification}:RecordsProps) => {
+const RecordsCard = ({ date, notification }:RecordsProps) => {
 	return (
 		<div className="recordCard">
 			<Small otherClasses="date">{date}</Small>

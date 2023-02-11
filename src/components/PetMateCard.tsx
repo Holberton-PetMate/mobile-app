@@ -8,7 +8,7 @@ interface PetMateCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]>
 	image: string
 }
 
-const PetMateCard = ({name, image, ...rest}:PetMateCardProps) => {
+const PetMateCard = ({ name, image, ...rest }:PetMateCardProps) => {
 	return (
 		<div className="petMateCard" {...rest}>
 			<div className="leftContainer">
