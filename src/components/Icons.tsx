@@ -40,14 +40,20 @@ export const Times = ({ color = "#25282A", ...rest }: IconProps) => {
 
 export const Edit = ({ color = "#25282A", ...rest }: IconProps) => {
 	return (
-	  <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M5.65 23.2q-.925 0-1.537-.613-.613-.612-.613-1.537V8.35q0-.925.613-1.538Q4.725 6.2 5.65 6.2h8.425l-1.35 1.35H5.65q-.3 0-.55.25-.25.25-.25.55v12.7q0 .3.25.55.25.25.55.25h12.7q.3 0 .55-.25.25-.25.25-.55V14l1.35-1.35v8.4q0 .925-.612 1.537-.613.613-1.538.613ZM12 14.7Zm4.675-7.575 1 1-6.35 6.275v.975h.95l6.375-6.3.9.95-6.675 6.7h-2.9v-2.9Zm2.875 2.9-2.875-2.9L18.6 5.2q.625-.625 1.525-.625.9 0 1.525.65l-.15-.175q.625.675.625 1.537 0 .863-.65 1.513Z"/></svg>
+	  <svg xmlns="http://www.w3.org/2000/svg" fill={color} {...rest} height="24" width="24"><path d="M5 19h1.4l8.625-8.625-1.4-1.4L5 17.6ZM19.3 8.925l-4.25-4.2 1.4-1.4q.575-.575 1.413-.575.837 0 1.412.575l1.4 1.4q.575.575.6 1.388.025.812-.55 1.387ZM17.85 10.4 7.25 21H3v-4.25l10.6-10.6Zm-3.525-.725-.7-.7 1.4 1.4Z"/></svg>
+	);
+};
+
+export const EditMain = ({ color = "#25282A", ...rest }: IconProps) => {
+	return (
+	  <svg xmlns="http://www.w3.org/2000/svg" fill={color} {...rest} height="24" width="24"><path d="M11 21v-6h2v2h8v2h-8v2Zm-8-2v-2h6v2Zm4-4v-2H3v-2h4V9h2v6Zm4-2v-2h10v2Zm4-4V3h2v2h4v2h-4v2ZM3 7V5h10v2Z"/></svg>
 	);
 };
 
 export const Plus = ({ color = "#25282A", ...rest }: IconProps) => {
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" fill={color} {...rest}><path d="M18.25 32.042V21.708H7.917v-3.5H18.25V7.875h3.5v10.333h10.333v3.5H21.75v10.334Z"/></svg>
-	);
+		<svg xmlns="http://www.w3.org/2000/svg" fill={color} {...rest} height="24" width="24"><path d="M11 19v-6H5v-2h6V5h2v6h6v2h-6v6Z"/></svg>
+    );
 };
 
 export const ChevronLeft = ({ color = "#25282A", ...rest }: IconProps) => {
@@ -70,7 +76,12 @@ export const Stats = ({ color = "#25282A", ...rest }: IconProps) => {
 
 export const Inbox = ({ color = "#25282A", ...rest }: IconProps) => {
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" fill={color} {...rest} height="40" width="40"><path d="M7.792 35q-1.125 0-1.959-.833Q5 33.333 5 32.208V7.792q0-1.125.833-1.959Q6.667 5 7.792 5h24.416q1.125 0 1.959.833.833.834.833 1.959v24.416q0 1.125-.833 1.959-.834.833-1.959.833ZM20 27.417q1.667 0 3.021-.959Q24.375 25.5 25.167 24h7.041V7.792H7.792V24h7.041q.792 1.5 2.146 2.458 1.354.959 3.021.959Z"/></svg>	);
+		<svg xmlns="http://www.w3.org/2000/svg" fill={color} {...rest} height="40" width="40"><path d="M7.792 35q-1.125 0-1.959-.833Q5 33.333 5 32.208V7.792q0-1.125.833-1.959Q6.667 5 7.792 5h24.416q1.125 0 1.959.833.833.834.833 1.959v24.416q0 1.125-.833 1.959-.834.833-1.959.833ZM20 27.417q1.667 0 3.021-.959Q24.375 25.5 25.167 24h7.041V7.792H7.792V24h7.041q.792 1.5 2.146 2.458 1.354.959 3.021.959Z"/></svg>
+    );
 };
 
-
+export const Delete = ({ color = "#25282A", ...rest }: IconProps) => {
+	return (
+		<svg xmlns="http://www.w3.org/2000/svg" fill={color} {...rest} height="24" width="24"><path d="M7 21q-.825 0-1.412-.587Q5 19.825 5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413Q17.825 21 17 21ZM17 6H7v13h10ZM9 17h2V8H9Zm4 0h2V8h-2ZM7 6v13Z"/></svg>
+    );
+};

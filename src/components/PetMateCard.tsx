@@ -1,7 +1,7 @@
 import { PropsWithoutRef } from "react";
 import "../styles/components/petMateCard.css";
 import { Body } from "./fonts";
-import { Edit } from "./Icons";
+import { EditMain } from "./Icons";
 
 interface PetMateCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 	name: string;
@@ -16,7 +16,7 @@ const PetMateCard = ({name, image, ...rest}:PetMateCardProps) => {
 				<Body style={{fontFamily: "Quicksand", fontWeight: 600}}>{name}</Body>
 			</div>
 			<div className="toolsContainer">
-				<Edit></Edit>
+				<EditMain></EditMain>
 			</div>
 		</div>
 	);

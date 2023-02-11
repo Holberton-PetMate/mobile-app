@@ -1,0 +1,19 @@
+.settingsCard {
+	width: 100%;
+	padding: 1rem 0.5rem;
+    background: #F2E9D8;
+    display: flex;
+	justify-content: space-between;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+}
+.schedule, .quantity {
+    width: 40%;
+}
+.toolsContainer {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
