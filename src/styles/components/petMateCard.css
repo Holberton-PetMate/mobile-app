@@ -6,11 +6,11 @@
     padding: 1rem;
     margin-bottom: 1.5rem;
 	box-shadow: 2px 4px 7px -1px rgba(122,122,122,0.75);
-    background: linear-gradient(54deg, #ff9155 0%, #ff9155 57%, rgb(255 226 78) 100%);
-    border-radius: 0.7rem;
+    background: #F2E9D8;
     color: black;
     font-weight: 700;
 	cursor: pointer;
+    border-radius: 0.5rem;
 }
 .leftContainer {
 	display: flex;

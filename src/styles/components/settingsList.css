@@ -1,0 +1,17 @@
+.settingsList {
+	width: 100%;
+	padding: 1rem 1.5rem;
+	display: flex;
+	flex-direction: column;
+}
+.schedule-h3 {
+	width: 40%;
+}
+.quantity-h3 {
+	width: 60%;
+}
+.titleHedingsSettings {
+	display: flex;
+	justify-content: space-between;
+	padding:  0.2rem 0.5rem;
+}
