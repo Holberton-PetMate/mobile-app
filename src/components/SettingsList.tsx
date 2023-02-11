@@ -23,8 +23,8 @@ const SettingsList = () => {
 	return (
 		<div className="settingsList">
 			<div className="titleHedingsSettings">
-				<H3 otherClasses="schedule-h3">Schedule</H3>
-				<H3 otherClasses="quantity-h3">Quantity</H3>
+				<H3 otherClasses="schedule">Schedule</H3>
+				<H3 otherClasses="quantity">Quantity</H3>
 			</div>
 			{settings.map(item => (
 				<SettingsCard 

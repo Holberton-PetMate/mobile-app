@@ -9,14 +9,14 @@ interface SettingsProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 	quantity: string
 }
 
-const SettingsCard = ({time, quantity}:SettingsProps) => {
+const SettingsCard = ( {time, quantity} :SettingsProps) => {
 	return (
 		<div className="settingsCard">
 			<Small otherClasses="schedule">{time}</Small>
 			<Small otherClasses="quantity">{quantity}</Small>
 			<div className="toolsContainer">
-				<Edit></Edit>
-				<Delete></Delete>
+				<Edit />
+				<Delete />
 			</div>
 		</div>
 	);
