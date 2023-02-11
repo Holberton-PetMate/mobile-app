@@ -12,8 +12,8 @@ const PetMateCard = ({ name, image, ...rest }:PetMateCardProps) => {
 	return (
 		<div className="petMateCard" {...rest}>
 			<div className="leftContainer">
-				<img src="/assets/black-logo.png" alt="" />
-				<Body style={{fontFamily: "Quicksand", fontWeight: 600}}>{name}</Body>
+				<img src="/assets/blue.png" alt="" />
+				<Body style={{fontFamily: "Montserrat", fontWeight: 400}}>{name}</Body>
 			</div>
 			<div className="toolsContainer">
 				<EditMain></EditMain>

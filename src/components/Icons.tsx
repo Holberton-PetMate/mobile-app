@@ -50,6 +50,12 @@ export const EditMain = ({ color = "#25282A", ...rest }: IconProps) => {
 	);
 };
 
+export const Delete = ({ color = "#25282A", ...rest }: IconProps) => {
+	return (
+		<svg xmlns="http://www.w3.org/2000/svg" fill={color} {...rest} height="24" width="24"><path d="M7 21q-.825 0-1.412-.587Q5 19.825 5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413Q17.825 21 17 21ZM17 6H7v13h10ZM9 17h2V8H9Zm4 0h2V8h-2ZM7 6v13Z"/></svg>
+    );
+};
+
 export const Plus = ({ color = "#25282A", ...rest }: IconProps) => {
 	return (
 		<svg xmlns="http://www.w3.org/2000/svg" fill={color} {...rest} height="24" width="24"><path d="M11 19v-6H5v-2h6V5h2v6h6v2h-6v6Z"/></svg>
@@ -77,11 +83,5 @@ export const Stats = ({ color = "#25282A", ...rest }: IconProps) => {
 export const Inbox = ({ color = "#25282A", ...rest }: IconProps) => {
 	return (
 		<svg xmlns="http://www.w3.org/2000/svg" fill={color} {...rest} height="40" width="40"><path d="M7.792 35q-1.125 0-1.959-.833Q5 33.333 5 32.208V7.792q0-1.125.833-1.959Q6.667 5 7.792 5h24.416q1.125 0 1.959.833.833.834.833 1.959v24.416q0 1.125-.833 1.959-.834.833-1.959.833ZM20 27.417q1.667 0 3.021-.959Q24.375 25.5 25.167 24h7.041V7.792H7.792V24h7.041q.792 1.5 2.146 2.458 1.354.959 3.021.959Z"/></svg>
-    );
-};
-
-export const Delete = ({ color = "#25282A", ...rest }: IconProps) => {
-	return (
-		<svg xmlns="http://www.w3.org/2000/svg" fill={color} {...rest} height="24" width="24"><path d="M7 21q-.825 0-1.412-.587Q5 19.825 5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413Q17.825 21 17 21ZM17 6H7v13h10ZM9 17h2V8H9Zm4 0h2V8h-2ZM7 6v13Z"/></svg>
     );
 };

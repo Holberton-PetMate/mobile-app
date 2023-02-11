@@ -2,7 +2,12 @@ import "../styles/components/bottomMenu.css";
 import { Alarm, Inbox, Stats } from "./Icons";
 import { useHistory } from "react-router";
 
-const BottomMenu = () => {
+
+interface BottomMenuProps {
+	pageName: string;
+}
+
+const BottomMenu = ({ pageName }:BottomMenuProps) => {
 	const history = useHistory();
 
   return (
@@ -10,22 +15,22 @@ const BottomMenu = () => {
 		<div className="bottomMenu">
 			<ul>
 				<li 
-					className="menuItem"
+					className={`menuItem ${pageName === "settings" && ("active")}`}
 					onClick={() => history.push("/dashboard/1/settings")}
 				>
-					<Alarm color="#1B212D" />
+					<Alarm color="#EBEBED" />
 				</li>
 				<li 
-					className="menuItem"
+					className={`menuItem ${pageName === "progress" && ("active")}`}
 					onClick={() => history.push("/dashboard/1/progress")}
 				>
-					<Stats color="#1B212D" />
+					<Stats color="#EBEBED" />
 				</li>
 				<li 
-					className="menuItem"
+					className={`menuItem ${pageName === "records" && ("active")}`}
 					onClick={() => history.push("/dashboard/1/records")}
 				>
-					<Inbox color="#1B212D" />
+					<Inbox color="#EBEBED" />
 				</li>
 			</ul>
 		</div>
