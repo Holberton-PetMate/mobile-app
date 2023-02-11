@@ -21,9 +21,7 @@ import "./layouts/variables.css";
 
 import { IonReactRouter } from "@ionic/react-router";
 import { Route } from "react-router";
-import Settings from "./pages/SettingsPage";
-import Progress from "./pages/ProgressPage";
-import Records from "./pages/RecordsPage";
+import BottomMenuLayout from "./layouts/BottomMenuLayout";
 import Login from "./pages/Login";
 import Index from "./pages/Index";
 import { SessionProvider } from "./hooks/useSession";
@@ -41,9 +39,7 @@ const App: React.FC = () => {
             <IonRouterOutlet>
               <Route path="/" component={Index} exact />
               <Route path="/my-petmates" render={() => <MyPetMatesPage />} />
-		      <Route path="/dashboard/:petmate_id/settings" component={Settings} />
-              <Route path="/dashboard/:petmate_id/progress" component={Progress} />
-              <Route path="/dashboard/:petmate_id/records" component={Records} />
+			  <Route path="/dashboard/:petmate_id" component={BottomMenuLayout}/>
               <Route path="/login" component={Login} />
             </IonRouterOutlet>
           </IonReactRouter>

@@ -1,4 +1,4 @@
-import "../styles/layouts/MainLayout.css";
+import "../styles/components/bottomMenu.css";
 import { Alarm, Inbox, Stats } from "./Icons";
 import { useHistory } from "react-router";
 
@@ -13,19 +13,19 @@ const BottomMenu = () => {
 					className="menuItem"
 					onClick={() => history.push("/dashboard/1/settings")}
 				>
-					<Alarm />
+					<Alarm color="#1B212D" />
 				</li>
 				<li 
 					className="menuItem"
 					onClick={() => history.push("/dashboard/1/progress")}
 				>
-					<Stats />
+					<Stats color="#1B212D" />
 				</li>
 				<li 
 					className="menuItem"
 					onClick={() => history.push("/dashboard/1/records")}
 				>
-					<Inbox />
+					<Inbox color="#1B212D" />
 				</li>
 			</ul>
 		</div>
