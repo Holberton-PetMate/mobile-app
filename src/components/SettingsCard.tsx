@@ -4,12 +4,12 @@ import { Small } from "./fonts";
 import { Edit, Delete } from "./Icons";
 
 
-interface SettingsProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
+interface SettingsCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 	time: string;
 	quantity: string
 }
 
-const SettingsCard = ( {time, quantity} :SettingsProps) => {
+const SettingsCard = ({ time, quantity }:SettingsCardProps) => {
 	return (
 		<div className="settingsCard">
 			<Small otherClasses="schedule">{time}</Small>
