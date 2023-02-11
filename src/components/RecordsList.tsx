@@ -1,36 +1,38 @@
-import { PropsWithoutRef } from "react";
 import RecordsCard from "./RecordsCard";
-import { useHistory } from "react-router";
 import "../styles/components/recordsList.css";
+import H3 from "./fonts/H3";
+import dayjs from 'dayjs';
 
-interface RecordsListProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
+// to check the actual date and compare with every string "date"...
+//const today = new Date();
 
-}
-
-const RecordsList = ({}:RecordsListProps) => {
-	const history = useHistory();
+const RecordsList = () => {
 	const records = [
 		{
-			date: "08-02-2023 15:34:00",
+			date: (dayjs("08-02-2023 15:34:00").format("ddd, MMM D - h:mm A")).toString(),
 			notification: "Empty stock"
 		},
 		{
-			date: "08-02-2023 15:30:00",
+			date: (dayjs("08-02-2023 15:30:00").format("ddd, MMM D - h:mm A")).toString(),
 			notification: "Food dispensed ok"
 		},
 		{
-			date: "08-02-2023 15:25:00",
+			date: (dayjs("08-02-2023 15:25:00").format("ddd, MMM D - h:mm A")).toString(),
 			notification: "Full stock"
 		}
-	]
+	];
+
 	return (
 		<div className="recordsList">
+			<div className="titleHedings">
+				<H3>Date</H3>
+				<H3>Notification</H3>
+			</div>
 			{records.map(item => (
 				<RecordsCard 
 					date={item.date}
 					notification={item.notification}
 					key={item.date}
-					onClick={() => history.push("/dashboard/1/progress")}
 				/>
 			))}
 		</div>

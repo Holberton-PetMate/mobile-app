@@ -7,8 +7,8 @@ const RecordsPage: React.FC = () => {
   return (
     <Layout>
       <PageHeading backUrl="/my-petmates" title="Records"/>
+	  <RecordsList />
 	  <BottomMenu />
-      <RecordsList/>
     </Layout>
   );
 };
