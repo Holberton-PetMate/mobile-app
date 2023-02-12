@@ -38,6 +38,7 @@
     color: #EBEBED;
     font-weight: 600;
     font-family: "Montserrat";
+    text-transform: capitalize;
 }
 .action-buttom:hover {
     opacity: 90%;
