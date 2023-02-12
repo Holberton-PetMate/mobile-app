@@ -1,7 +1,6 @@
 import SettingsList from "../components/SettingsList";
 import PageHeading from "../components/PageHeading";
 import ModalCard from "../components/ModalCard";
-import H3 from "../components/fonts/H3";
 
 
 const SettingsPage: React.FC = () => {
@@ -9,7 +8,7 @@ const SettingsPage: React.FC = () => {
     <>
         <PageHeading backUrl="/my-petmates" title="Settings" />
         <SettingsList />
-        <ModalCard action="Create" title="New feeding time">
+        <ModalCard action="create" title="New feeding time">
         </ModalCard>
     </>
   );

@@ -3,8 +3,8 @@ import "../styles/components/modalCard.css";
 import H3 from "./fonts/H3";
 
 interface ModalCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
-	action: "Create" | "Update";
-	title: "New feeding time" | "Update feeding time"
+	action?: "create" | "update";
+	title?: string
 }
 
 const ModalCard = ({ action, title, children }:ModalCardProps) => {
