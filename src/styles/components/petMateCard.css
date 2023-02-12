@@ -19,4 +19,5 @@
 }
 .leftContainer img {
 	width: 3rem;
+    cursor: pointer;
 }

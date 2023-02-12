@@ -5,6 +5,9 @@
 .logoContainer img, .leftContainer img  {
 	height: 100%;
 }
+.logoContainer {
+  cursor: pointer;
+}
 .pageHeading {
   width: 100%;
   height: 60px;

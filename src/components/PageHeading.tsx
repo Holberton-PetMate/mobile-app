@@ -27,7 +27,7 @@ const PageHeading = ({ subtitle, title, backUrl }: PageHeadingProps) => {
             </H1>
         </div>
 		<div className="logoContainer">
-			<img src="/assets/black-logo.png" alt="" />
+			<img src="/assets/blue.png" alt="" />
 		</div>
     </div>
   );

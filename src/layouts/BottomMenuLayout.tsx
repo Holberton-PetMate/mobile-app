@@ -27,7 +27,7 @@ const BottomMenuLayout = () => {
 	<IonPage>
       <IonContent>
 			{pagesComponents[pageName] && pagesComponents[pageName]()}
-			<BottomMenu />
+			<BottomMenu pageName={pageName} />
       </IonContent>
     </IonPage>
   );

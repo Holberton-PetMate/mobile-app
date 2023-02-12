@@ -15,8 +15,8 @@ const SettingsCard = ({ time, quantity }:SettingsCardProps) => {
 			<Small otherClasses="schedule">{time}</Small>
 			<Small otherClasses="quantity">{quantity}</Small>
 			<div className="toolsContainer">
-				<Edit />
-				<Delete />
+				<Edit className="edit-icon"/>
+				<Delete className="delete-icon"/>
 			</div>
 		</div>
 	);
