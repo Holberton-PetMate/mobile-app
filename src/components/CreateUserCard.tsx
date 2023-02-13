@@ -1,18 +1,17 @@
 import { PropsWithoutRef } from 'react';
-import '../styles/components/modalCard.css';
 import H3 from './fonts/H3';
 
-interface ModalCardProps extends PropsWithoutRef<JSX.IntrinsicElements['div']> {
+interface CreateUserCard extends PropsWithoutRef<JSX.IntrinsicElements['div']> {
   action?: 'create' | 'update';
   title?: string;
 }
 
-const ModalCard = ({ action, title, children }: ModalCardProps) => {
+const CreateUserCard = ({ action, title, children }: CreateUserCard) => {
   return (
-    <div className="general-container">
+    <div className="card-container">
       <div className="grey-line"></div>
       <div className="action-title">
-        <H3>New feeding time</H3>
+        <H3>New Petmate</H3>
       </div>
       {children}
       <button className="action-buttom">Create</button>
@@ -20,4 +19,4 @@ const ModalCard = ({ action, title, children }: ModalCardProps) => {
   );
 };
 
-export default ModalCard;
+export default CreateUserCard;
