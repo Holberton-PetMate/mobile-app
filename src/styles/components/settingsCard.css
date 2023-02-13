@@ -20,3 +20,6 @@
 .edit-icon, .delete-icon {
     cursor: pointer;
 }
+.delete-icon:hover {
+    fill: rgb(189, 14, 14);
+}
