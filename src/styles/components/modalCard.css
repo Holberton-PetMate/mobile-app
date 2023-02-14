@@ -23,10 +23,13 @@
 .action-title {
     margin-top: 20px;
 }
+.children-container {
+    border: 1px solid black;
+}
 .action-buttom {
     background-color: #1c1c22;
-    width: 30%;
-    height: 6vh;
+    width: 35%;
+    height: 6.5vh;
     border-radius: 0.5rem;
     display: flex;
     justify-content: center;
@@ -36,6 +39,7 @@
     position: absolute;
     bottom: 4vh;
     color: #EBEBED;
+    font-size: 1.1rem;
     font-weight: 600;
     font-family: "Montserrat";
 }

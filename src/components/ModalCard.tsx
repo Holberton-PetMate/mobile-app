@@ -7,9 +7,9 @@ interface ModalCardProps extends PropsWithoutRef<JSX.IntrinsicElements['div']> {
   title?: string;
 }
 
-const ModalCard = ({ action, title, children }: ModalCardProps) => {
+const ModalCard = ({ action, title, children, ...rest }: ModalCardProps) => {
   return (
-    <div className="general-container">
+    <div className="general-container" {...rest}>
       <div className="grey-line"></div>
       <div className="action-title">
         <H3>New feeding time</H3>
