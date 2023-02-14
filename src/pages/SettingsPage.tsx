@@ -10,7 +10,7 @@ const SettingsPage: React.FC = () => {
       <PageHeading backUrl="/my-petmates" title="Settings" />
       <SettingsList />
 
-      <ModalCard action="create" title="New feeding time">
+      <ModalCard action="create" title="New feeding time" style={{minHeight: "400px"}}>
         <div className="modal-container">
           <div className="time-selector">
             <h3 className="children-title">Time</h3>

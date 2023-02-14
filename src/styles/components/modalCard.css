@@ -25,8 +25,8 @@
 }
 .action-buttom {
     background-color: #1c1c22;
-    width: 30%;
-    height: 6vh;
+    width: 35%;
+    height: 6.5vh;
     border-radius: 0.5rem;
     display: flex;
     justify-content: center;
@@ -38,6 +38,7 @@
     color: #EBEBED;
     font-weight: 600;
     font-family: "Montserrat";
+    font-size: 1.1rem;
     text-transform: capitalize;
 }
 .action-buttom:hover {
