@@ -8,6 +8,7 @@ import dayjs from "dayjs";
 const SettingsPage: React.FC = () => {
 	const [time, setTime] = useState<string>(dayjs().format("HH:mm"));
 	const [quantity, setQuantity] = useState<number | null>(null);
+	const [createModalState, setCreateModalState] = useState<boolean>(false);
 
 	const validateQuantity = (e: any) => {
 		const value = e.target.value;
@@ -32,6 +33,7 @@ const SettingsPage: React.FC = () => {
 			<PageHeading backUrl="/my-petmates" title="Settings" />
 			<SettingsList />
 			<ModalCard
+				isActive={createModalState}
 				action="create"
 				title="New feeding time"
 				onSubmit={onSubmit}

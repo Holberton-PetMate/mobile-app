@@ -1,8 +1,6 @@
 import SettingsCard from "./SettingsCard";
 import "../styles/components/settingsList.css";
 import H3 from "./fonts/H3";
-import RoundedButton from "./RoundedButton";
-
 
 const SettingsList = () => {
 	const settings = [
@@ -27,13 +25,12 @@ const SettingsList = () => {
 				<H3 otherClasses="quantity">Quantity</H3>
 			</div>
 			{settings.map(item => (
-				<SettingsCard 
+				<SettingsCard
 					time={item.time}
 					quantity={item.quantity}
 					key={item.time}
 				/>
 			))}
-			<RoundedButton />
 		</div>
 	);
 };

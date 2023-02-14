@@ -4,14 +4,17 @@ import H3 from './fonts/H3';
 
 interface ModalCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 	action?: "create" | "update";
-	title?: string
+	title?: string;
+	isActive: boolean;
 	onSubmit?: () => void
+	closeModal?: () => void
 }
 
-const ModalCard = ({ action, title, onSubmit, children, ...rest }: ModalCardProps) => {
+const ModalCard = ({ action, title, isActive, onSubmit, closeModal, children, ...rest }: ModalCardProps) => {
 	return (
-		<div className="general-container" {...rest}>
-			<div className="grey-line"></div>
+		<div className={`general-container 
+			${isActive ? "show" : ""}`} {...rest}>
+			<div className="grey-line" onClick={closeModal}></div>
 			<div className="action-title">
 				<H3>{title}</H3>
 			</div>
