@@ -1,0 +1,45 @@
+.info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.info-container span {
+  width: 100%;
+  margin: 0.8rem 0;
+  text-align: start;
+}
+
+.info-container input {
+  background-color: white;
+  border: none;
+  height: 56px;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.info-container select {
+  background-color: white;
+  border: none;
+  width: 100%;
+  height: 56px;
+  border-radius: 15px;
+  padding: 0 1rem;
+}
+
+.pic-container {
+  margin-bottom: 1.2rem;
+  width: 140px;
+  height: 140px;
+  background-color: #1c1c22;
+  border-radius: 50%;
+}
+
+/* .pic-container img {
+    width: 100%;
+    height: 100%;
+} */

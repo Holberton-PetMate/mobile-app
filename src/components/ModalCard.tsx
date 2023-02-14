@@ -1,6 +1,6 @@
-import { PropsWithoutRef } from "react";
-import "../styles/components/modalCard.css";
-import H3 from "./fonts/H3";
+import { PropsWithoutRef } from 'react';
+import '../styles/components/modalCard.css';
+import H3 from './fonts/H3';
 
 interface ModalCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 	action?: "create" | "update";
@@ -9,7 +9,6 @@ interface ModalCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 }
 
 const ModalCard = ({ action, title, onSubmit, children, ...rest }: ModalCardProps) => {
-
 	return (
 		<div className="general-container" {...rest}>
 			<div className="grey-line"></div>
