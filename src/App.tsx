@@ -27,6 +27,8 @@ import Index from "./pages/Index";
 import { SessionProvider } from "./hooks/useSession";
 import { ToastProvider } from "./hooks/useToast";
 import MyPetMatesPage from "./pages/MyPetMatesPage";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 setupIonicReact();
 
@@ -34,16 +36,21 @@ const App: React.FC = () => {
   return (
     <SessionProvider>
       <ToastProvider>
-        <IonApp>
-          <IonReactRouter>
-            <IonRouterOutlet>
-              <Route path="/" component={Index} exact />
-              <Route path="/my-petmates" render={() => <MyPetMatesPage />} />
-			  <Route path="/dashboard/:petmate_id" component={BottomMenuLayout}/>
-              <Route path="/login" component={Login} />
-            </IonRouterOutlet>
-          </IonReactRouter>
-        </IonApp>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <IonApp>
+            <IonReactRouter>
+              <IonRouterOutlet>
+                <Route path="/" component={Index} exact />
+                <Route path="/my-petmates" render={() => <MyPetMatesPage />} />
+                <Route
+                  path="/dashboard/:petmate_id"
+                  component={BottomMenuLayout}
+                />
+                <Route path="/login" component={Login} />
+              </IonRouterOutlet>
+            </IonReactRouter>
+          </IonApp>
+        </LocalizationProvider>
       </ToastProvider>
     </SessionProvider>
   );
