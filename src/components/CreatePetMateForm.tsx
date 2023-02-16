@@ -38,10 +38,6 @@ const CreatePetMateForm = ({ setName, setPetMateId, setFood }: CreatePetMateForm
 					<MenuItem value="1">DogChow</MenuItem>
 					<MenuItem value="2">CatChow</MenuItem>
 					<MenuItem value="3">Pedigree</MenuItem>
-					<MenuItem value="4">Pedigree</MenuItem>
-					<MenuItem value="5">Pedigree</MenuItem>
-					<MenuItem value="6">Pedigree</MenuItem>
-					<MenuItem value="7">Pedigree</MenuItem>
 				</Select>
 			</FormControl>
 		</>

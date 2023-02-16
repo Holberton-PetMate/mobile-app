@@ -1,0 +1,45 @@
+.progressSelector {
+    width: 100%;
+    height: 6vh;
+    padding-top: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todayButton, .weekButton{
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-family: "Montserrat";
+    background-color: #8d8d8d;
+}
+
+.todayButton {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.todayButton:focus {
+    background-color: #6b6b6b;
+}
+
+.weekButton {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.weekButton:focus {
+    background-color: #6b6b6b;
+}
+
+.dietChartContainer {
+    margin-top: 20px;
+    padding-bottom: 0;
+}
+
+.dietChart, .stockChart {
+    width: 100%;
+    height: 30vh;
+    padding: 25px;
+}
+
+.h3 {
+    margin-left: 15px;}
