@@ -23,10 +23,20 @@ const ProgressPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="stockChartContainer">
-        <H3>Stock</H3>
-        <div className="stockChart">
-          <Stat />
+      <div className="stockContainer">
+        <div className="foodStatus">
+          <H3>Food status</H3>
+          <div className="foodStock">
+            <div className="food"></div>
+          </div>
+          <span>50%</span>
+        </div>
+        <div className="bowlStatus">
+          <H3>Bowl Status</H3>
+          <div className="bowlStock">
+            <div className="bowl"></div>
+          </div>
+          <span>30%</span>
         </div>
       </div>
     </>

@@ -1,15 +1,15 @@
-import { ValidationErrors } from "final-form";
-import { Form } from "react-final-form";
-import { useHistory } from "react-router";
-import Button from "../components/Button";
-import { H1, Small } from "../components/fonts";
-import LabeledTextField from "../components/LabeledTextField";
-import Layout from "../components/Layout";
-import { useSessionContext } from "../hooks/useSession";
-import { useToastContext } from "../hooks/useToast";
-import Users from "../lib/aromas/User";
-import "../styles/pages/Login.css";
-import Toast from "../components/Toast";
+import { ValidationErrors } from 'final-form';
+import { Form } from 'react-final-form';
+import { useHistory } from 'react-router';
+import Button from '../components/Button';
+import { H1, Small } from '../components/fonts';
+import LabeledTextField from '../components/LabeledTextField';
+import Layout from '../components/Layout';
+import { useSessionContext } from '../hooks/useSession';
+import { useToastContext } from '../hooks/useToast';
+import Users from '../lib/User';
+import '../styles/pages/Login.css';
+import Toast from '../components/Toast';
 
 const Login: React.FC = () => {
   const { storeCurrentUser, storeToken } = useSessionContext();
@@ -26,11 +26,11 @@ const Login: React.FC = () => {
         });
         await storeCurrentUser({ user: data.user });
         await storeToken({ token: data.token });
-        router.push("/dashboard");
+        router.push('/dashboard');
       } catch (error: any) {
         setToastData({
-          message: "Invalid email or password",
-          status: "error",
+          message: 'Invalid email or password',
+          status: 'error',
           isActive: true,
         });
       }
@@ -58,7 +58,7 @@ const Login: React.FC = () => {
                 />
               </div>
               <Button
-                style={{ marginTop: "1.5rem" }}
+                style={{ marginTop: '1.5rem' }}
                 text="Entrar"
                 type="submit"
                 onClick={() => {
@@ -74,8 +74,8 @@ const Login: React.FC = () => {
         toastData={toastData}
         dismiss={() =>
           setToastData({
-            message: "",
-            status: "error",
+            message: '',
+            status: 'error',
             isActive: false,
           })
         }
@@ -87,15 +87,15 @@ const Login: React.FC = () => {
 const validation = (values: any) => {
   const errors: ValidationErrors = {};
   if (!values.email) {
-    errors.email = "Required";
+    errors.email = 'Required';
   } else {
-    const domain = values.email.split("@")[1];
-    if (!domain || !domain.includes(".")) {
-      errors.email = "Invalid email format";
+    const domain = values.email.split('@')[1];
+    if (!domain || !domain.includes('.')) {
+      errors.email = 'Invalid email format';
     }
   }
   if (!values.password) {
-    errors.password = "Required";
+    errors.password = 'Required';
   }
   return errors;
 };

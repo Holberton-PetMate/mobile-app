@@ -1,7 +1,7 @@
 import constate from "constate";
 import { useState } from "react";
-import { User } from "../lib/aromas/User";
-import Users from "../lib/aromas/User";
+import { User } from "../lib/User";
+import Users from "../lib/User";
 import { getVerifiedStorage } from "../utils";
 
 interface InitializeSessionProps {
