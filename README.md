@@ -57,10 +57,9 @@ Start the development server :
 
 
 ## Host
-pending
-<!-- <a target="_blank" href="https://cloud.google.com/?hl=en">
-	<img src="images/readme-images/google-cloud-logo.png" width="80"></img>
-</a> -->
+<a target="_blank" href="https://httpd.apache.org/">
+	<img src="images/readme-images/apache-server-logo.png" width="130"></img>
+</a>
 
 ## Front-end developers
 
@@ -68,6 +67,7 @@ pending
 <a target="_blank" href="https://www.linkedin.com/in/mattobelen/">Belén Matto</a> &
 <a target="_blank" href="https://www.linkedin.com/in/ignacio-castro347/">Ignacio Castro</a>
 
+<br>
 
 <p align="center">
 	<a target="_blank"
