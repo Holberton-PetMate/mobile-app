@@ -1,0 +1,55 @@
+.warning-container {
+    background-color: #EBEBED;
+    width: 60%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 7px -1px rgba(37, 36, 36, 0.75);
+}
+.text-container {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.delete-title {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+small {
+    font-family: "Montserrat";
+    font-size: 0.8rem;
+    margin-top: 0;
+}
+.buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.yes-button, .no-button {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: #FFFF;
+}
+.yes-button {
+    background-color: #f6b00d;
+}
+.no-button {
+    background-color: #e6a40c;
+}
+.yes-button:hover, .no-button:hover {
+    opacity: 85%;
+}
