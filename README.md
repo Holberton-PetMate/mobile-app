@@ -12,8 +12,6 @@
 	page :)
 </p>
 
-<br>
-
 ## PetMate mobile app
 This is an Mobile App project made with **Ionic, Capacitor** and **Typescript**. It can be build to an iOS or Android app.
 
@@ -32,12 +30,8 @@ This is an Mobile App project made with **Ionic, Capacitor** and **Typescript**.
 	</a>
 </p>
 
-<br>
-
 ## Dependencies
 All dependencies that are needed are save in the **node_modules** directory and these metadata can be checked in the **package.json** file.
-
-<br>
 
 ## Main directories and files
 -  **src/components**: contains all the components created. Ex. fonts, svg icons, buttons, cards, lists, charts.
@@ -47,8 +41,6 @@ All dependencies that are needed are save in the **node_modules** directory and 
 - **src/styles**: contains the CSS styles of all components and pages
 
 - **App.tsx**: basic React component, essential for the initial working app
-
-<br>
 
 ## Usage example
 Clone and access to this repository:
@@ -69,8 +61,6 @@ pending
 <!-- <a target="_blank" href="https://cloud.google.com/?hl=en">
 	<img src="images/readme-images/google-cloud-logo.png" width="80"></img>
 </a> -->
-
-<br>
 
 ## Front-end developers
 
