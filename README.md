@@ -2,7 +2,7 @@
 <img src="images/readme-images/petmate-isologo2.png" alt="petmate-isologo" width=40% heigth=40% >
 </p>
 
-<h2 align="center">MPV Cohort #18 - Holberton School Uruguay</h2>
+<h2 align="center">MVP Cohort #18 - Holberton School Uruguay</h2>
 
 <p align="center"> We are a group of students from Holberton School Uruguay. For our MVP, we decided to create <strong>PetMate</strong>, an intelligent solution that automates the feeding of your pet. With PetMate, we aim to simplify and optimize this task mainly for pet owners who spend a large part of their time away from home.
 
