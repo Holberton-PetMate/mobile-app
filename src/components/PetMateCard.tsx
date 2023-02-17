@@ -5,10 +5,10 @@ import { EditMain } from "./Icons";
 
 interface PetMateCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 	name: string;
-	image: string
+	image?: string
 }
 
-const PetMateCard = ({ name, image, ...rest }:PetMateCardProps) => {
+const PetMateCard = ({ name, ...rest }: PetMateCardProps) => {
 	return (
 		<div className="petMateCard" {...rest}>
 			<div className="leftContainer">

@@ -4,6 +4,10 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
+* {
+	box-sizing: border-box;
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/

@@ -2,37 +2,20 @@ import { PropsWithoutRef } from "react";
 import PetMateCard from "./PetMateCard";
 import { useHistory } from "react-router";
 import "../styles/components/petMateList.css";
+import { FeederProps } from "../lib/Feeder";
 
 interface PetMateListProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
-
+	feeders: FeederProps[]
 }
 
-const PetMateList = ({ }: PetMateListProps) => {
+const PetMateList = ({ feeders }: PetMateListProps) => {
 	const history = useHistory();
-	const petMates = [
-		{
-			name: "Nacho's PetMate",
-			image: ""
-		},
-		{
-			name: "Vale's PetMate",
-			image: ""
-		},
-		{
-			name: "Facu's PetMate",
-			image: ""
-		},
-		{
-			name: "Toti's PetMate",
-			image: ""
-		},
-	]
 	return (
 		<div className="petMateList">
-			{petMates.map(item => (
+			{feeders.map(item => (
 				<PetMateCard
 					name={item.name}
-					image={item.image}
+					// image={item.image}
 					key={item.name}
 					onClick={() => history.push("/dashboard/1/progress")}
 				/>

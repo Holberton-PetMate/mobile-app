@@ -33,27 +33,27 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 setupIonicReact();
 
 const App: React.FC = () => {
-  return (
-    <SessionProvider>
-      <ToastProvider>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <IonApp>
-            <IonReactRouter>
-              <IonRouterOutlet>
-                <Route path="/" component={Index} exact />
-                <Route path="/my-petmates" render={() => <MyPetMatesPage />} />
-                <Route
-                  path="/dashboard/:petmate_id"
-                  component={BottomMenuLayout}
-                />
-                <Route path="/login" component={Login} />
-              </IonRouterOutlet>
-            </IonReactRouter>
-          </IonApp>
-        </LocalizationProvider>
-      </ToastProvider>
-    </SessionProvider>
-  );
+	return (
+		<SessionProvider>
+			<ToastProvider>
+				<LocalizationProvider dateAdapter={AdapterDayjs}>
+					<IonApp>
+						<IonReactRouter>
+							<IonRouterOutlet>
+								<Route path="/" component={Index} exact />
+								<Route path="/my-petmates" render={() => <MyPetMatesPage />} />
+								<Route
+									path="/dashboard/:petmate_id"
+									component={BottomMenuLayout}
+								/>
+								<Route path="/login" component={Login} />
+							</IonRouterOutlet>
+						</IonReactRouter>
+					</IonApp>
+				</LocalizationProvider>
+			</ToastProvider>
+		</SessionProvider>
+	);
 };
 
 export default App;

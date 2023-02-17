@@ -12,12 +12,12 @@
 	cursor: pointer;
     border-radius: 0.5rem;
 }
-.leftContainer {
+.petMateCard .leftContainer {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
 }
-.leftContainer img {
+.petMateCard .leftContainer img {
 	width: 3rem;
     cursor: pointer;
 }
