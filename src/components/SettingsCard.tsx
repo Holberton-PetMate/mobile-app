@@ -13,9 +13,10 @@ interface SettingsCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]
 const SettingsCard = ({ hour, minutes, quantity }:SettingsCardProps) => {
 	return (
     <div className="settingsCard">
-      <Small otherClasses="scheduleHour">{hour}:</Small>
-      <Small otherClasses="schedule">{minutes}</Small>
-      <Small otherClasses="quantity">{quantity}</Small>
+      <Small otherClasses="schedule">
+        {hour}:{minutes}
+      </Small>
+      <Small otherClasses="quantity">{quantity}gr.</Small>
       <div className="toolsContainer">
         <Delete className="delete-icon" />
       </div>

@@ -9,17 +9,27 @@
     margin-top: 0.5rem;
     align-items: center;
 }
-.schedule, .quantity {
-    width: 40%;
+
+
+.settingsCard .schedule {
+    width: 30%;
+    margin-left: 10px;
 }
+
+.quantity {
+    width: 35%;
+}
+
 .toolsContainer {
-    width: 20%;
+    width: 8%;
     display: flex;
     justify-content: space-evenly;
 }
-.edit-icon, .delete-icon {
+
+.delete-icon {
     cursor: pointer;
 }
+
 .delete-icon:hover {
     fill: rgb(189, 14, 14);
 }

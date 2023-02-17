@@ -36,7 +36,7 @@ const SettingsList = ({ feedingTimes }: SettingsListProps) => {
 					hour={item.hour}
 					minutes ={item.minute}
 					quantity={item.weight}
-					key={item.hour}
+					key={item.id}
 				/>
 			))}
 		</div>
