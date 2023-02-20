@@ -1,43 +1,60 @@
-import SettingsList from "../components/SettingsList";
-import PageHeading from "../components/PageHeading";
-import ModalCard from "../components/ModalCard";
-import { TextField, InputAdornment } from "@mui/material";
-import { useState } from "react";
-import dayjs from "dayjs";
+import SettingsList from '../components/SettingsList';
+import PageHeading from '../components/PageHeading';
+import ModalCard from '../components/ModalCard';
+import { TextField, InputAdornment } from '@mui/material';
+import { useEffect, useState } from 'react';
+import RoundedButton from '../components/RoundedButton';
+import dayjs from 'dayjs';
+import FeedingTimesApi, { FeedingTimesProps } from '../lib/FeedingTimes';
 
 const SettingsPage: React.FC = () => {
-	const [time, setTime] = useState<string>(dayjs().format("HH:mm"));
+	const [time, setTime] = useState<string>(dayjs().format('HH:mm'));
 	const [quantity, setQuantity] = useState<number | null>(null);
 	const [createModalState, setCreateModalState] = useState<boolean>(false);
+	const [feedingtimes, setFeedingTimes] = useState<FeedingTimesProps[]>([]);
+
+	useEffect(() => {
+		(async () => {
+			const response = await FeedingTimesApi.getFeedingTimes();
+			console.log(response.data);
+			setFeedingTimes(response.data as FeedingTimesProps[]);
+		})();
+	}, []);
 
 	const validateQuantity = (e: any) => {
 		const value = e.target.value;
-		setQuantity(value)
-		if (value === undefined) return
+		setQuantity(value);
+		if (value === undefined) return;
 		if (value < 0) {
 			e.target.value = 0;
 		} else if (value > 500) {
 			e.target.value = 500;
 		}
-	}
+	};
 
 	const onSubmit = () => {
 		console.log({
 			time,
-			quantity
-		})
-	}
+			quantity,
+		});
+	};
 
 	return (
 		<>
 			<PageHeading backUrl="/my-petmates" title="Settings" />
-			<SettingsList />
+			<SettingsList feedingTimes={feedingtimes} />
+			<div className="roundedButtonContainer">
+				<RoundedButton onClick={() => setCreateModalState(true)} />
+			</div>
+
+			{/* Create FeedingTime Form */}
 			<ModalCard
 				isActive={createModalState}
 				action="create"
 				title="New feeding time"
 				onSubmit={onSubmit}
-				style={{ minHeight: "350px" }}
+				closeModal={() => setCreateModalState(false)}
+				style={{ minHeight: '350px' }}
 			>
 				<TextField
 					defaultValue={time}
@@ -48,7 +65,7 @@ const SettingsPage: React.FC = () => {
 					onChange={(e: any) => setTime(e.target.value)}
 					// 5 min
 					inputProps={{ step: 300 }}
-					sx={{ width: "100%", marginBottom: "0.5rem" }}
+					sx={{ width: '100%', marginBottom: '0.5rem' }}
 				/>
 				<TextField
 					label="Quantity of food"
@@ -59,7 +76,7 @@ const SettingsPage: React.FC = () => {
 					onChange={validateQuantity}
 					InputProps={{
 						endAdornment: <InputAdornment position="end">gr.</InputAdornment>,
-						inputProps: { min: 0, max: 500 }
+						inputProps: { min: 0, max: 500 },
 					}}
 				/>
 			</ModalCard>

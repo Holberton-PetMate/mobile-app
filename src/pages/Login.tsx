@@ -1,15 +1,15 @@
-import { ValidationErrors } from "final-form";
-import { Form } from "react-final-form";
-import { useHistory } from "react-router";
-import Button from "../components/Button";
-import { H1, Small } from "../components/fonts";
-import LabeledTextField from "../components/LabeledTextField";
-import Layout from "../components/Layout";
-import { useSessionContext } from "../hooks/useSession";
-import { useToastContext } from "../hooks/useToast";
-import Users from "../lib/User";
-import "../styles/pages/Login.css";
-import Toast from "../components/Toast";
+import { ValidationErrors } from 'final-form';
+import { Form } from 'react-final-form';
+import { useHistory } from 'react-router';
+import Button from '../components/Button';
+import { H1, Small } from '../components/fonts';
+import LabeledTextField from '../components/LabeledTextField';
+import Layout from '../components/Layout';
+import { useSessionContext } from '../hooks/useSession';
+import { useToastContext } from '../hooks/useToast';
+import Users from '../lib/User';
+import '../styles/pages/Login.css';
+import Toast from '../components/Toast';
 
 const Login: React.FC = () => {
 	const { storeCurrentUser, storeToken } = useSessionContext();

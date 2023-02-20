@@ -1,0 +1,62 @@
+.alertOverlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+	top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: rgba(69, 68, 68, 0.64);
+}
+.alertContainer {
+    background-color: #EBEBED;
+    width: 60%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 7px -1px rgba(37, 36, 36, 0.75);
+}
+.text-container {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.alertContainer .title {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.alertContainer button {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: #FFFF;
+}
+.primaryButton {
+    background-color: #f6b00d;
+}
+.secondaryButton {
+    background-color: #e6a40c;
+}
+.alertContainer button:hover {
+    opacity: 85%;
+}

@@ -1,0 +1,95 @@
+.progressSelector {
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todayButton, .weekButton{
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-family: "Montserrat";
+    background-color: #8d8d8d;
+}
+
+.todayButton {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.todayButton:focus, .weekButton:focus {
+    background-color: #6b6b6b;
+}
+
+.weekButton {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.dietChartContainer {
+    margin-top: 20px;
+    padding-bottom: 0;
+}
+
+.dietChart {
+    width: 100%;
+    height: 250px;
+    padding: 25px;
+}
+
+.dietChartContainer .h3 {
+    margin-left: 30px;
+}
+
+.stockContainer {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.foodStatus, .bowlStatus {
+    width: 130px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.foodStatus h3, .bowlStatus h3 {
+    margin-bottom: 10px;
+}
+
+.foodStatus span, .bowlStatus span {
+    margin-top: 10px;
+}
+
+
+.foodStock{
+    width: 100px;
+    height: 200px;
+    background-color: #FB6E1F;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.food {
+    width: 100%;
+    height: 50%;
+    background-color: #8d8d8d;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.bowlStock {
+    width: 100px;
+    height: 200px;
+    background-color: #FB6E1F;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.bowl {
+    width: 100%;
+    height: 70%;
+    background-color: #8d8d8d;
+    border-radius: 1rem 1rem 0 0;
+}

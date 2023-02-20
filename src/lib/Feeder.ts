@@ -9,10 +9,20 @@ export interface FeederProps {
   food_storage: number;
 }
 
+export interface CreateFeederProps {
+  code_id: string | null;
+  name: string | null;
+  active_food: number | null;
+}
+
 const Feeders = {
   getFeeders: async () => {
     const api = await ApiInstance();
     return api.get("/users/9/feeders");
+  },
+  storeFeeders: async (data:CreateFeederProps) => {
+    const api = await ApiInstance();
+    return api.post("/feeders", data);
   },
 };
 

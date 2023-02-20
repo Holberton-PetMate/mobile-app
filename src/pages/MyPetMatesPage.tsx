@@ -23,35 +23,14 @@ const MyPetMatesPage: React.FC = () => {
 		})()
 	}, [])
 
-	const onSubmit = () => {
-		console.log({
-			name,
-			petMateId,
-			food
-		})
-	}
 	return (
 		<Layout>
 			<PageHeading title="My PetMates" />
 			<PetMateList feeders={feeders} />
 			<div className="roundedButtonContainer">
-				<RoundedButton onClick={() => setCreateModalState(true)} />
+				<RoundedButton onClick={() => { }} />
 			</div>
-			<ModalCard
-				isActive={createModalState}
-				action="create"
-				title="New PetMate"
-				onSubmit={onSubmit}
-				closeModal={() => setCreateModalState(false)}
-				style={{ minHeight: "600px" }}
-			>
-				<CreatePetMateForm
-					setName={setName}
-					setPetMateId={setPetMateId}
-					setFood={setFood}
-				/>
-			</ModalCard>
-		</Layout>
+		</Layout >
 	);
 };
 
