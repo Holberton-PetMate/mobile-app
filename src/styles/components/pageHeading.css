@@ -1,13 +1,3 @@
-.logoContainer, .leftContainer {
-	width: 40px;
-	height: 40px;
-}
-.logoContainer img, .leftContainer img  {
-	height: 100%;
-}
-.logoContainer {
-  cursor: pointer;
-}
 .pageHeading {
   width: 100%;
   height: 60px;
@@ -21,4 +11,16 @@
   padding: 0rem 1.5rem;
   background-color: #1B212D;
   border-radius: 0 0 12px 12px;
+}
+.pageHeading .logoContainer, .pageHeading .leftContainer {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+.pageHeading .logoContainer img, .pageHeading .leftContainer img  {
+	height: 100%;
+}
+.pageHeading .logoContainer {
+  cursor: pointer;
 }
