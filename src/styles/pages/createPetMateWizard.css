@@ -6,7 +6,9 @@
 	justify-content: center;
 	align-items: center;
 	padding: 2rem 1rem;
-	background-color: #1B212D;
+	background: rgb(10,18,33);
+	background: linear-gradient(297deg, rgba(10,18,33,1) 0%, 
+	rgba(9,9,38,1) 39%, rgba(8,12,37,1) 100%);
 }
 .topToolsContainer {
 	width: 100vw;
@@ -22,23 +24,29 @@
 	color:  #374d79 !important;
 	font-size: 14px;
 }
+.petmateLogo {
+	position: relative;
+	width: 55px;
+	z-index: 10;
+	margin-bottom: 1rem;
+}
 .wizardContainer h1 {
 	text-align: center;
 	margin-bottom: 1rem;
+	color: #EBEBED;
 }
 .wizardContainer input {
 	width: 80%;
 	background-color: #fff;
-	border: none;
+	border-color: 2px solid white;
 	border-radius: 5px;
 	padding: 0.5rem 1rem;
 	font-size: 22px;
 	text-align: center;
 	color: rgba(0,0,0, 0.87);
-
 }
 .wizardContainer input:focus {
-	border: 2px solid rgb(49, 113, 224);
+	border: 2px solid rgb(49, 113, 224) !important; 
 }
 .formContainer {
 	width: 100%;
@@ -68,6 +76,7 @@
 	align-items: center;
 	font-size: 16px;
 	font-weight: 600;
+	cursor: pointer;
 }
 .buttonsContainer button:disabled{
 	opacity: 0.5;
