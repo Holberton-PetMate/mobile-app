@@ -18,7 +18,7 @@ export interface CreateFeederProps {
 const Feeders = {
   getFeeders: async () => {
     const api = await ApiInstance();
-    return api.get("/users/9/feeders");
+    return api.get("/users/1/feeders");
   },
   storeFeeders: async (data:CreateFeederProps) => {
     const api = await ApiInstance();

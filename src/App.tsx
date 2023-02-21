@@ -29,6 +29,7 @@ import { ToastProvider } from "./hooks/useToast";
 import MyPetMatesPage from "./pages/MyPetMatesPage";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import CreatePetMateWizard from "./pages/CreatePetMateWizard";
 
 setupIonicReact();
 
@@ -42,6 +43,7 @@ const App: React.FC = () => {
 							<IonRouterOutlet>
 								<Route path="/" component={Index} exact />
 								<Route path="/my-petmates" render={() => <MyPetMatesPage />} />
+								<Route path="/my-petmates/new" render={() => <CreatePetMateWizard />} />
 								<Route
 									path="/dashboard/:petmate_id"
 									component={BottomMenuLayout}

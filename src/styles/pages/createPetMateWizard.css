@@ -1,0 +1,74 @@
+.wizardContainer {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 1rem;
+	background-color: #1B212D;
+}
+.topToolsContainer {
+	width: 100vw;
+	height: 70px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	padding: 1rem 1.5rem;
+}
+.topToolsContainer small {
+	color:  #374d79 !important;
+	font-size: 14px;
+}
+.wizardContainer h1 {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.wizardContainer input {
+	width: 80%;
+	background-color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 0.5rem 1rem;
+	font-size: 22px;
+	text-align: center;
+	color: rgba(0,0,0, 0.87);
+
+}
+.wizardContainer input:focus {
+	border: 2px solid rgb(49, 113, 224);
+}
+.formContainer {
+	width: 100%;
+	padding: 1.5rem 1rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.buttonsContainer {
+	width: 100%;
+	padding: 1rem 1.5rem 2rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+.buttonsContainer button{
+	padding: 0.5rem;
+	padding-left: 1rem;
+	background-color: #FB6E1F;
+	border-radius: 5px;
+	color: #1B212D;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 600;
+}
+.buttonsContainer button:disabled{
+	opacity: 0.5;
+}

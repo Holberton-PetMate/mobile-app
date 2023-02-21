@@ -2,18 +2,14 @@ import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import PageHeading from "../components/PageHeading";
 import PetMateList from "../components/PetMateList";
-import ModalCard from "../components/ModalCard";
-import CreatePetMateForm from "../components/CreatePetMateForm";
 import RoundedButton from "../components/RoundedButton";
 import "../styles/pages/MyPetMates.css";
 import FeedersApi, { FeederProps } from "../lib/Feeder";
+import { useHistory } from "react-router";
 
 const MyPetMatesPage: React.FC = () => {
-	const [name, setName] = useState<string | null>(null);
-	const [petMateId, setPetMateId] = useState<string | null>(null);
-	const [food, setFood] = useState<string | null>(null);
-	const [createModalState, setCreateModalState] = useState<boolean>(false);
 	const [feeders, setFeeders] = useState<FeederProps[]>([]);
+	const history = useHistory();
 
 	useEffect(() => {
 		(async () => {
@@ -28,7 +24,7 @@ const MyPetMatesPage: React.FC = () => {
 			<PageHeading title="My PetMates" />
 			<PetMateList feeders={feeders} />
 			<div className="roundedButtonContainer">
-				<RoundedButton onClick={() => { }} />
+				<RoundedButton onClick={() => history.push("/my-petmates/new")} />
 			</div>
 		</Layout >
 	);
