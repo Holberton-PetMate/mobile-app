@@ -31,8 +31,9 @@ const CreatePetMateWizard: React.FC = () => {
   }, [wifiPassword]);
 
   useEffect(() => {
-    if (step === 5) setNextButtonDisabled(false)
-  }, []);
+    if (step === 5) setNextButtonDisabled(true)
+    console.log(petMateName)
+  }, [petMateName]);
 
   // When we go to the next view
   useEffect(() => {
