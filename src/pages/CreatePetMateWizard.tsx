@@ -5,6 +5,7 @@ import { useHistory } from 'react-router';
 import InsertCodeView from '../components/petMateWizard/views/InsertCodeView';
 import AccessPointView from '../components/petMateWizard/views/AccessPointView';
 import WifiListView from '../components/petMateWizard/views/WifiListView';
+import NewPetMateView from '../components/petMateWizard/views/NewPetMateView';
 import Layout from '../components/Layout';
 import PasswordView from '../components/petMateWizard/views/PasswordView';
 import { Small } from '../components/fonts';
@@ -12,10 +13,12 @@ import { ChevronRight } from '../components/Icons';
 
 const CreatePetMateWizard: React.FC = () => {
   const history = useHistory();
-  const [step, setStep] = useState<number>(4);
+  const [step, setStep] = useState<number>(5);
   const [codeId, setCodeId] = useState<string | null>(null);
   const [wifiSsid, setWifiSsid] = useState<string | null>(null);
   const [wifiPassword, setWifiPassword] = useState<string | null>(null);
+  const [petMateName, setPetMateName] = useState<string | null>(null);
+  const [foodType, setFoodType] = useState<string | null>(null);
 
   const [nextButtonDisabled, setNextButtonDisabled] = useState<boolean>(true);
 
@@ -26,6 +29,10 @@ const CreatePetMateWizard: React.FC = () => {
   useEffect(() => {
     if (step === 4) setNextButtonDisabled(!wifiPassword || wifiPassword?.length < 8);
   }, [wifiPassword]);
+
+  useEffect(() => {
+    if (step === 5) setNextButtonDisabled(false)
+  }, []);
 
   // When we go to the next view
   useEffect(() => {
@@ -41,6 +48,10 @@ const CreatePetMateWizard: React.FC = () => {
     if (step === 4) {
       console.log({ codeId, wifiSsid, wifiPassword });
       return;
+    }
+    if (step === 6) {
+      history.push({ pathname:"/my-petmates"})
+      return
     }
     setStep(step + 1);
     setNextButtonDisabled(true);
@@ -70,6 +81,7 @@ const CreatePetMateWizard: React.FC = () => {
             setWifiPassword={setWifiPassword}
           />
         )}
+        {step === 5 && <NewPetMateView  setPetMateName={setPetMateName} setFoodType={setFoodType} />}
 
         {step !== 3 && (
           <div className="buttonsContainer">
