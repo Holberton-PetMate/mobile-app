@@ -1,6 +1,6 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "ionic-app-base",
+	"appName": "PetMate",
 	"webDir": "build",
 	"bundledWebRuntime": false
 }
