@@ -43,7 +43,7 @@ const App: React.FC = () => {
 							<IonRouterOutlet>
 								<Route path="/" component={Index} exact />
 								<Route path="/my-petmates" render={() => <MyPetMatesPage />} />
-								<Route path="/my-petmates/new" render={() => <CreatePetMateWizard />} />
+								<Route path="/wizard" render={() => <CreatePetMateWizard />} />
 								<Route
 									path="/dashboard/:petmate_id"
 									component={BottomMenuLayout}

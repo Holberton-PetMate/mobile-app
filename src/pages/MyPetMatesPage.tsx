@@ -24,7 +24,7 @@ const MyPetMatesPage: React.FC = () => {
 			<PageHeading title="My PetMates" />
 			<PetMateList feeders={feeders} />
 			<div className="roundedButtonContainer">
-				<RoundedButton onClick={() => history.push("/my-petmates/new")} />
+				<RoundedButton onClick={() => history.push({ pathname:"/wizard"})} />
 			</div>
 		</Layout >
 	);

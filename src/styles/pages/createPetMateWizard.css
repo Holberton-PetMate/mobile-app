@@ -25,10 +25,10 @@
 	font-size: 14px;
 }
 .petmateLogo {
-	position: relative;
-	width: 55px;
+	position: absolute;
+	width: 120px;
 	z-index: 10;
-	margin-bottom: 1rem;
+	top: 20vh;
 }
 .wizardContainer h1 {
 	text-align: center;
@@ -44,18 +44,19 @@
 	font-size: 22px;
 	text-align: center;
 	color: rgba(0,0,0, 0.87);
+	border: 2px solid transparent !important;
 }
-.wizardContainer input:focus {
-	border: 2px solid rgb(49, 113, 224) !important; 
-}
+
 .formContainer {
 	width: 100%;
-	padding: 1.5rem 1rem 1rem;
+	padding-bottom: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
-.buttonsContainer {
+
+.wizardContainer .buttonsContainer {
 	width: 100%;
 	padding: 1rem 1.5rem 2rem;
 	position: fixed;
@@ -65,7 +66,7 @@
 	justify-content: flex-end;
 	align-items: flex-start;
 }
-.buttonsContainer button{
+.wizardContainer .buttonsContainer button{
 	padding: 0.5rem;
 	padding-left: 1rem;
 	background-color: #FB6E1F;
@@ -78,6 +79,6 @@
 	font-weight: 600;
 	cursor: pointer;
 }
-.buttonsContainer button:disabled{
-	opacity: 0.5;
+.wizardContainer .buttonsContainer button:disabled{
+	background-color: #5d5653;
 }

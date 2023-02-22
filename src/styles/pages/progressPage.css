@@ -27,13 +27,16 @@
 }
 
 .dietChartContainer {
-    margin-top: 20px;
+    padding-top: 20px;
     padding-bottom: 0;
+    margin: 0 1rem;
+    border-radius: 10px;
+    background-color: #f2e9d8b9;
 }
 
 .dietChart {
     width: 100%;
-    height: 250px;
+    height: 220q;
     padding: 25px;
 }
 
@@ -47,49 +50,4 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.foodStatus, .bowlStatus {
-    width: 130px;
-    height: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.foodStatus h3, .bowlStatus h3 {
-    margin-bottom: 10px;
-}
-
-.foodStatus span, .bowlStatus span {
-    margin-top: 10px;
-}
-
-
-.foodStock{
-    width: 100px;
-    height: 200px;
-    background-color: #FB6E1F;
-    border-radius: 1rem 1rem 0 0;
-}
-
-.food {
-    width: 100%;
-    height: 50%;
-    background-color: #8d8d8d;
-    border-radius: 1rem 1rem 0 0;
-}
-
-.bowlStock {
-    width: 100px;
-    height: 200px;
-    background-color: #FB6E1F;
-    border-radius: 1rem 1rem 0 0;
-}
-
-.bowl {
-    width: 100%;
-    height: 70%;
-    background-color: #8d8d8d;
-    border-radius: 1rem 1rem 0 0;
 }
