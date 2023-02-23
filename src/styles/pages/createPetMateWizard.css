@@ -1,84 +1,126 @@
 .wizardContainer {
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 2rem 1rem;
-	background: rgb(10,18,33);
-	background: linear-gradient(297deg, rgba(10,18,33,1) 0%, 
-	rgba(9,9,38,1) 39%, rgba(8,12,37,1) 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: rgb(10, 18, 33);
+  background: linear-gradient(
+    297deg,
+    rgba(10, 18, 33, 1) 0%,
+    rgba(9, 9, 38, 1) 39%,
+    rgba(8, 12, 37, 1) 100%
+  );
 }
 .topToolsContainer {
-	width: 100vw;
-	height: 70px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	display: flex;
-	align-items: center;
-	padding: 1rem 1.5rem;
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
 }
 .topToolsContainer small {
-	color:  #374d79 !important;
-	font-size: 14px;
+  color: #374d79 !important;
+  font-size: 14px;
 }
 .petmateLogo {
-	width: 120px;
-	z-index: 10;
-	top: 20vh;
-	margin-bottom: 20px;
+  width: 120px;
+  z-index: 10;
+  top: 20vh;
+  margin-bottom: 20px;
 }
 .wizardContainer h1 {
-	text-align: center;
-	margin-bottom: 1rem;
-	color: #EBEBED;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ebebed;
+}
+.wizardContainer p {
+  color: #fff;
+  margin-top: 30;
+  margin-bottom: 10px;
 }
 .wizardContainer input {
-	width: 80%;
-	background-color: #fff;
-	border-color: 2px solid white;
-	border-radius: 5px;
-	padding: 0.5rem 1rem;
-	font-size: 22px;
-	text-align: center;
-	color: rgba(0,0,0, 0.87);
-	border: 2px solid transparent !important;
+  width: 80%;
+  background-color: #fff;
+  border-color: 2px solid white;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 22px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  border: 2px solid transparent !important;
 }
-
 .formContainer {
-	width: 100%;
-	padding-bottom: 6rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+.petMateNameContainer,
+.foodTypeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.petMateNameContainer p,
+.foodTypeContainer p {
+  width: 80%;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 80%;
+}
+.petMateName {
+	height: 44.8px;
+} 
+.petMateNameContainer input {
+	text-align: left;
+	font-size: 1.1rem;
+}
+.foodTypes {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffff !important;
+  appearance: none;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
 .wizardContainer .buttonsContainer {
-	width: 100%;
-	padding: 1rem 1.5rem 2rem;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-start;
+  width: 100%;
+  padding: 1rem 1.5rem 2rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
-.wizardContainer .buttonsContainer button{
-	padding: 0.5rem;
-	padding-left: 1rem;
-	background-color: #FB6E1F;
-	border-radius: 5px;
-	color: #1B212D;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 16px;
-	font-weight: 600;
-	cursor: pointer;
+.wizardContainer .buttonsContainer button {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  background-color: #fb6e1f;
+  border-radius: 5px;
+  color: #1b212d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
 }
-.wizardContainer .buttonsContainer button:disabled{
-	background-color: #5d5653;
+.wizardContainer .buttonsContainer button:disabled {
+  background-color: #5d5653;
 }

@@ -5,6 +5,7 @@ import { useHistory } from 'react-router';
 import InsertCodeView from '../components/petMateWizard/views/InsertCodeView';
 import AccessPointView from '../components/petMateWizard/views/AccessPointView';
 import WifiListView from '../components/petMateWizard/views/WifiListView';
+import NewPetMateView from '../components/petMateWizard/views/NewPetMateView';
 import Layout from '../components/Layout';
 import PasswordView from '../components/petMateWizard/views/PasswordView';
 import { Small } from '../components/fonts';
@@ -16,6 +17,8 @@ const CreatePetMateWizard: React.FC = () => {
 	const [codeId, setCodeId] = useState<string | null>(null);
 	const [wifiSsid, setWifiSsid] = useState<string | null>(null);
 	const [wifiPassword, setWifiPassword] = useState<string | null>(null);
+	const [petMateName, setPetMateName] = useState<string | null>(null);
+	const [foodType, setFoodType] = useState<string | null>(null);
 
 	const [nextButtonDisabled, setNextButtonDisabled] = useState<boolean>(true);
 
@@ -32,6 +35,10 @@ const CreatePetMateWizard: React.FC = () => {
 		if (step === 2) setTimeout(() => setNextButtonDisabled(false), 5000);
 	}, [step]);
 
+	useEffect(() => {
+		if (step === 5) setNextButtonDisabled(!petMateName);
+	}, [petMateName]);
+
 	const selectWifiSsid = (ssid: string) => {
 		setWifiSsid(ssid);
 		nextStep();
@@ -40,7 +47,10 @@ const CreatePetMateWizard: React.FC = () => {
 	const nextStep = () => {
 		if (step === 4) {
 			console.log({ codeId, wifiSsid, wifiPassword });
-			return;
+		}
+		if (step === 5) {
+			history.push({ pathname: "/my-petmates" })
+			return
 		}
 		setStep(step + 1);
 		setNextButtonDisabled(true);
@@ -70,20 +80,23 @@ const CreatePetMateWizard: React.FC = () => {
 						setWifiPassword={setWifiPassword}
 					/>
 				)}
+				{step === 5 && <NewPetMateView setPetMateName={setPetMateName} setFoodType={setFoodType} />}
 
-				{step !== 3 && (
-					<div className="buttonsContainer">
-						<button
-							className="primaryButton"
-							disabled={nextButtonDisabled}
-							onClick={nextStep}
-						>
-							Next <ChevronRight />
-						</button>
-					</div>
-				)}
-			</div>
-		</Layout>
+				{
+					step !== 3 && (
+						<div className="buttonsContainer">
+							<button
+								className="primaryButton"
+								disabled={nextButtonDisabled}
+								onClick={nextStep}
+							>
+								Next <ChevronRight />
+							</button>
+						</div>
+					)
+				}
+			</div >
+		</Layout >
 	);
 };
 
