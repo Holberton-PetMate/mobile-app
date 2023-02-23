@@ -8,7 +8,7 @@
 
 <p align="center">Discover more about us in our 
 	<a target="_blank"
-	href="http://www.petmate.tech/">PetMate</a> 
+	href="http:petmate.tech/">PetMate</a> 
 	page :)
 </p>
 
