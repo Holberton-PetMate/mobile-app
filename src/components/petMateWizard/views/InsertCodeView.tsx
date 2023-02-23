@@ -11,7 +11,7 @@ const InsertCodeView = ({ setCodeId }:InsertCodeViewProps) => {
       <img className="petmateLogo" src="/assets/blue.png" alt="logo"></img>
       <div className="formContainer">
         <H1>Enter your PetMate code</H1>
-        <input type="text" onChange={(e) => setCodeId(e.target.value)} maxLength={6}/>
+        <input type="text" onChange={(e) => setCodeId(e.target.value)} maxLength={12}/>
       </div>
     </>
   );

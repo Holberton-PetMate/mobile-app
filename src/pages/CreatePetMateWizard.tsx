@@ -10,6 +10,7 @@ import Layout from '../components/Layout';
 import PasswordView from '../components/petMateWizard/views/PasswordView';
 import { Small } from '../components/fonts';
 import { ChevronRight } from '../components/Icons';
+import ArduinoApi, { WifiProps } from "../lib/Arduino";
 
 const CreatePetMateWizard: React.FC = () => {
 	const history = useHistory();
@@ -21,6 +22,13 @@ const CreatePetMateWizard: React.FC = () => {
 	const [foodType, setFoodType] = useState<string | null>(null);
 
 	const [nextButtonDisabled, setNextButtonDisabled] = useState<boolean>(true);
+
+  const [networks, setNetworks] = useState<WifiProps[]>([]);
+
+  const getNetworksWifi = async () => {
+    const response = await ArduinoApi.getNetworks();
+    setNetworks(response.data as WifiProps[]);
+  };
 
 	useEffect(() => {
 		if (step === 1) setNextButtonDisabled(codeId?.length !== 6 || !codeId);
@@ -39,31 +47,37 @@ const CreatePetMateWizard: React.FC = () => {
 		if (step === 5) setNextButtonDisabled(!petMateName);
 	}, [petMateName]);
 
-	const selectWifiSsid = (ssid: string) => {
-		setWifiSsid(ssid);
-		nextStep();
-	};
+  const selectWifiSsid = (ssid: string | null) => {
+    setWifiSsid(ssid);
+    nextStep();
+  };
 
-	const nextStep = () => {
-		if (step === 4) {
-			console.log({ codeId, wifiSsid, wifiPassword });
-		}
-		if (step === 5) {
-			history.push({ pathname: "/my-petmates" })
-			return
-		}
-		setStep(step + 1);
-		setNextButtonDisabled(true);
-	};
+  const nextStep = async () => {
+    if (step === 2) {
+      await getNetworksWifi();
+    }
+    if (step === 4) {
+      const response = ArduinoApi.setWifi({ ssid: wifiSsid, password: wifiPassword, rssi: null });
+      console.log(response);
+      return;
+    }
+    if (step === 5) {
+      history.push({ pathname:"/my-petmates"})
+      
+      return
+    }
+    setStep(step + 1);
+    setNextButtonDisabled(true);
+  };
 
-	const cancel = () => {
-		setStep(1);
-		setCodeId(null);
-		setWifiSsid(null);
-		setWifiPassword(null);
-		setNextButtonDisabled(true);
-		history.push('/my-petmates');
-	}
+  const cancel = () => {
+    setStep(1);
+    setCodeId(null);
+    setWifiSsid(null);
+    setWifiPassword(null);
+    setNextButtonDisabled(true);
+    history.push('/my-petmates');
+  }
 
 	return (
 		<Layout>
@@ -72,15 +86,15 @@ const CreatePetMateWizard: React.FC = () => {
 					<Small onClick={cancel}>Cancel</Small>
 				</div>
 
-				{step === 1 && <InsertCodeView setCodeId={setCodeId} />}
-				{step === 2 && <AccessPointView nextStep={() => setStep(3)} />}
-				{step === 3 && <WifiListView selectWifiSsid={selectWifiSsid} />}
-				{step === 4 && (
-					<PasswordView
-						setWifiPassword={setWifiPassword}
-					/>
-				)}
-				{step === 5 && <NewPetMateView setPetMateName={setPetMateName} setFoodType={setFoodType} />}
+        {step === 1 && <InsertCodeView setCodeId={setCodeId} />}
+        {step === 2 && <AccessPointView codeId={codeId} />}
+        {step === 3 && <WifiListView networkList={networks} selectWifiSsid={selectWifiSsid} />}
+        {step === 4 && (
+          <PasswordView
+            setWifiPassword={setWifiPassword}
+          />
+        )}
+        {step === 5 && <NewPetMateView  setPetMateName={setPetMateName} setFoodType={setFoodType} />}
 
 				{
 					step !== 3 && (
