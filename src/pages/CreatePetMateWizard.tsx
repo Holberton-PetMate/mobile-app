@@ -13,15 +13,15 @@ import { ChevronRight } from '../components/Icons';
 import ArduinoApi, { WifiProps } from "../lib/Arduino";
 
 const CreatePetMateWizard: React.FC = () => {
-  const history = useHistory();
-  const [step, setStep] = useState<number>(4);
-  const [codeId, setCodeId] = useState<string | null>(null);
-  const [wifiSsid, setWifiSsid] = useState<string | null>(null);
-  const [wifiPassword, setWifiPassword] = useState<string | null>(null);
-  const [petMateName, setPetMateName] = useState<string | null>(null);
-  const [foodType, setFoodType] = useState<string | null>(null);
+	const history = useHistory();
+	const [step, setStep] = useState<number>(1);
+	const [codeId, setCodeId] = useState<string | null>(null);
+	const [wifiSsid, setWifiSsid] = useState<string | null>(null);
+	const [wifiPassword, setWifiPassword] = useState<string | null>(null);
+	const [petMateName, setPetMateName] = useState<string | null>(null);
+	const [foodType, setFoodType] = useState<string | null>(null);
 
-  const [nextButtonDisabled, setNextButtonDisabled] = useState<boolean>(true);
+	const [nextButtonDisabled, setNextButtonDisabled] = useState<boolean>(true);
 
   const [networks, setNetworks] = useState<WifiProps[]>([]);
 
@@ -30,22 +30,22 @@ const CreatePetMateWizard: React.FC = () => {
     setNetworks(response.data as WifiProps[]);
   };
 
-  useEffect(() => {
-    if (step === 1) setNextButtonDisabled(codeId?.length !== 12 || !codeId);
-  }, [codeId]);
+	useEffect(() => {
+		if (step === 1) setNextButtonDisabled(codeId?.length !== 6 || !codeId);
+	}, [codeId]);
 
-  useEffect(() => {
-    if (step === 4) setNextButtonDisabled(!wifiPassword || wifiPassword?.length < 8);
-  }, [wifiPassword]);
+	useEffect(() => {
+		if (step === 4) setNextButtonDisabled(!wifiPassword || wifiPassword?.length < 8);
+	}, [wifiPassword]);
 
-  useEffect(() => {
-    if (step === 5) setNextButtonDisabled(!petMateName);
-  }, [petMateName]);
+	// When we go to the next view
+	useEffect(() => {
+		if (step === 2) setTimeout(() => setNextButtonDisabled(false), 5000);
+	}, [step]);
 
-  // When we go to the next view
-  useEffect(() => {
-    if (step === 2) setTimeout(() => setNextButtonDisabled(false), 5000);
-  }, [step]);
+	useEffect(() => {
+		if (step === 5) setNextButtonDisabled(!petMateName);
+	}, [petMateName]);
 
   const selectWifiSsid = (ssid: string | null) => {
     setWifiSsid(ssid);
@@ -79,12 +79,12 @@ const CreatePetMateWizard: React.FC = () => {
     history.push('/my-petmates');
   }
 
-  return (
-    <Layout>
-      <div className="wizardContainer">
-        <div className="topToolsContainer">
-          <Small onClick={cancel}>Cancel</Small>
-        </div>
+	return (
+		<Layout>
+			<div className="wizardContainer">
+				<div className="topToolsContainer">
+					<Small onClick={cancel}>Cancel</Small>
+				</div>
 
         {step === 1 && <InsertCodeView setCodeId={setCodeId} />}
         {step === 2 && <AccessPointView codeId={codeId} />}
@@ -96,20 +96,22 @@ const CreatePetMateWizard: React.FC = () => {
         )}
         {step === 5 && <NewPetMateView  setPetMateName={setPetMateName} setFoodType={setFoodType} />}
 
-        {step !== 3 && (
-          <div className="buttonsContainer">
-            <button
-              className="primaryButton"
-              disabled={nextButtonDisabled}
-              onClick={nextStep}
-            >
-              Next <ChevronRight />
-            </button>
-          </div>
-        )}
-      </div>
-    </Layout>
-  );
+				{
+					step !== 3 && (
+						<div className="buttonsContainer">
+							<button
+								className="primaryButton"
+								disabled={nextButtonDisabled}
+								onClick={nextStep}
+							>
+								Next <ChevronRight />
+							</button>
+						</div>
+					)
+				}
+			</div >
+		</Layout >
+	);
 };
 
 export default CreatePetMateWizard;
