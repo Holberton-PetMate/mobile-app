@@ -31,8 +31,7 @@ const CreatePetMateWizard: React.FC = () => {
   }, [wifiPassword]);
 
   useEffect(() => {
-    if (step === 5) setNextButtonDisabled(true)
-    console.log(petMateName)
+    if (step === 5) setNextButtonDisabled(!petMateName);
   }, [petMateName]);
 
   // When we go to the next view
@@ -50,8 +49,9 @@ const CreatePetMateWizard: React.FC = () => {
       console.log({ codeId, wifiSsid, wifiPassword });
       return;
     }
-    if (step === 6) {
+    if (step === 5) {
       history.push({ pathname:"/my-petmates"})
+      
       return
     }
     setStep(step + 1);
