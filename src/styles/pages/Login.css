@@ -32,6 +32,7 @@
   width: 120px;
   z-index: 10;
   top: 20vh;
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 .loginContainer h1 {
@@ -82,7 +83,7 @@
 }
 .formContainer {
   width: 100%;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,10 +125,11 @@
   margin-top: 25px;
 }
 .loginContainer .loginButton {
+  height: 40px;
   font-family: "Montserrat";
   font-size: 1.2rem;
   font-weight: 650;
-  padding: 0.5rem;
+  padding: 0.7rem;
   background-color: #f1610e;
   border-radius: 5px;
   color: #1b212d;
@@ -151,4 +153,22 @@
 }
 .loginContainer .buttonsContainer button:disabled {
   background-color: #5d5653;
+}
+.registrateContainer {
+  width: 100%;
+  font-family: "Montserrat";
+  font-weight: 350;
+  color: #f2e9d8;
+  opacity: 70%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registrateContainer .notMemberTitle {
+  margin-right: 5px;
+}
+.registrateContainer .registerTitle {
+  font-weight: 550;
+  cursor: pointer;
 }

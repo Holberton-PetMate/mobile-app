@@ -13,7 +13,7 @@ const Login = ({}: LoginProps) => {
           <H1>PetMate</H1>
 		  
 		  <div className="loginTitleContainer">
-		  	<p className="firstTitle">Log In</p>
+		  	<p className="firstTitle">Log in</p>
 		  	<p className="secondTitle">Sign in to continue</p>
 		  </div>
 
@@ -35,6 +35,10 @@ const Login = ({}: LoginProps) => {
 			</button>
 		  </div>
 
+		  <div className="registrateContainer">
+		  	<p className="notMemberTitle">Not a member?</p>
+		  	<p className="registerTitle">Register now</p>
+		  </div>
         </div>
       </div>
     </>
