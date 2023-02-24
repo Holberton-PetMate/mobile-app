@@ -1,11 +1,154 @@
-.page {
-  padding: 0 2rem;
-}
-.header {
-  padding: 3rem 0 1rem;
-}
-.form {
+.loginContainer {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: rgb(10, 18, 33);
+  background: linear-gradient(
+    297deg,
+    rgba(10, 18, 33, 1) 0%,
+    rgba(9, 9, 38, 1) 39%,
+    rgba(8, 12, 37, 1) 100%
+  );
+}
+.topToolsContainer {
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.topToolsContainer small {
+  color: #374d79 !important;
+  font-size: 14px;
+}
+.petmateLogo {
+  width: 120px;
+  z-index: 10;
+  top: 20vh;
+  margin-bottom: 20px;
+}
+.loginContainer h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #ebebed;
+}
+.loginTitleContainer {
+  height: 10vh;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loginTitleContainer p {
+  margin-top: 0;
+}
+.loginContainer p {
+  color: #ffff;
+  margin-top: 30;
+  margin-bottom: 10px;
+}
+.loginTitleContainer .firstTitle {
+  font-family: "Montserrat";
+  font-size: 1.7rem;
+  font-weight: 500;
+  opacity: 90%;
+}
+.loginTitleContainer .secondTitle {
+  font-family: "Montserrat";
+  font-weight: 350;
+  color: #f2e9d8;
+  opacity: 70%;
+}
+.loginContainer input {
+  width: 80%;
+  height: 44.8px;
+  background-color: #fff;
+  border-color: 2px solid white;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.87);
+  border: 2px solid transparent !important;
+}
+.formContainer {
+  width: 100%;
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userEmailContainer {
+  margin-top: 15px;
+}
+.userEmailContainer,
+.userPasswordContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 1px;
+}
+.userEmailContainer p,
+.userPasswordContainer p {
+  width: 80%;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 80%;
+}
+.loginContainer .forgotPassword {
+  margin-top: 0;
+  margin-left: 180px;
+  width: 147.98px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 550;
+  color: #e06c00;
+  cursor: pointer;
+}
+.loginButtonContainer {
+  margin-top: 25px;
+}
+.loginContainer .loginButton {
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  font-weight: 650;
+  padding: 0.5rem;
+  background-color: #f1610e;
+  border-radius: 5px;
+  color: #1b212d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.loginContainer .buttonsContainer button {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  background-color: #fb6e1f;
+  border-radius: 5px;
+  color: #1b212d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.loginContainer .buttonsContainer button:disabled {
+  background-color: #5d5653;
 }
