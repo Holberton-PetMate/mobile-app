@@ -70,7 +70,7 @@ const Login: React.FC = () => {
 					)}
 				/>
 			</div>
-			<Toast
+			{/* <Toast
 				toastData={toastData}
 				dismiss={() =>
 					setToastData({
@@ -79,7 +79,7 @@ const Login: React.FC = () => {
 						isActive: false,
 					})
 				}
-			/>
+			/> */}
 		</Layout>
 	);
 };

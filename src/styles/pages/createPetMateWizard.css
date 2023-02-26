@@ -30,8 +30,6 @@
 }
 .petmateLogo {
   width: 120px;
-  z-index: 10;
-  top: 20vh;
   margin-bottom: 20px;
 }
 .wizardContainer h1 {

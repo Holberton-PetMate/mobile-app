@@ -17,7 +17,7 @@ const PetMateList = ({ feeders }: PetMateListProps) => {
 					name={item.name}
 					// image={item.image}
 					key={item.name}
-					onClick={() => history.push("/dashboard/1/progress")}
+					onClick={() => history.push(`/dashboard/${item.id}/progress`)}
 				/>
 			))}
 		</div>

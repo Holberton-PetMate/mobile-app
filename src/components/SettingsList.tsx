@@ -5,26 +5,11 @@ import { PropsWithoutRef } from "react";
 import { FeedingTimesProps } from "../lib/FeedingTimes";
 
 interface SettingsListProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
-	feedingTimes: FeedingTimesProps[]
+	feedingTimes: FeedingTimesProps[],
+	onDelete: (id: number) => void;
 }
 
-// const SettingsList = () => {
-// 	const settings = [
-// 		{
-// 			time: "10:00 hs.",
-// 			quantity: "80 gr."
-// 		},
-// 		{
-// 			time: "15:00 hs.",
-// 			quantity: "100 gr."
-// 		},
-// 		{
-// 			time: "22:00 hs.",
-// 			quantity: "70 gr."
-// 		}
-// ];
-
-const SettingsList = ({ feedingTimes }: SettingsListProps) => {
+const SettingsList = ({ feedingTimes, onDelete }: SettingsListProps) => {
 	return (
 		<div className="settingsList">
 			<div className="titleHedingsSettings">
@@ -33,10 +18,12 @@ const SettingsList = ({ feedingTimes }: SettingsListProps) => {
 			</div>
 			{feedingTimes.map(item => (
 				<SettingsCard
-					hour={item.hour}
-					minutes ={item.minute}
+					feedingTimeId={item.id}
+					hour={`${item.hour < 10 ? "0" : ""}${item.hour}`}
+					minutes={`${item.minute < 10 ? "0" : ""}${item.minute}`}
 					quantity={item.weight}
 					key={item.id}
+					onDelete={onDelete}
 				/>
 			))}
 		</div>

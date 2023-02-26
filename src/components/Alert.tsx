@@ -40,7 +40,7 @@ const Alert = ({
 						<div className="buttons-container">
 							<button className="primaryButton" onClick={onClickPrimaryButton}>{primaryButtonText}</button>
 							{secondaryButtonText && (
-								<button className="secondaryButton" onClick={onClickPrimaryButton}>{secondaryButtonText}</button>
+								<button className="secondaryButton" onClick={onClickSecondaryButton}>{secondaryButtonText}</button>
 							)}
 						</div>
 					</div>

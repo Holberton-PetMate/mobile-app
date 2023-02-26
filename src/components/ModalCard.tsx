@@ -6,11 +6,12 @@ interface ModalCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
 	action?: "create" | "update";
 	title?: string;
 	isActive: boolean;
-	onSubmit?: () => void
-	closeModal?: () => void
+	onSubmit?: () => void;
+	closeModal?: () => void;
+	primaryButtonIsDisabled: boolean;
 }
 
-const ModalCard = ({ action, title, isActive, onSubmit, closeModal, children, ...rest }: ModalCardProps) => {
+const ModalCard = ({ action, title, isActive, onSubmit, closeModal, primaryButtonIsDisabled, children, ...rest }: ModalCardProps) => {
 	return (
 		<div className={`general-container 
 			${isActive ? "show" : ""}`} {...rest}>
@@ -22,7 +23,7 @@ const ModalCard = ({ action, title, isActive, onSubmit, closeModal, children, ..
 				{children}
 			</div>
 			<div className="buttonsContainer">
-				<button className="action-buttom" onClick={onSubmit}>
+				<button className="action-buttom" onClick={onSubmit} disabled={primaryButtonIsDisabled}>
 					{action}
 				</button>
 			</div>

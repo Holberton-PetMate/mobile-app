@@ -1,17 +1,32 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { H1 } from '../../fonts';
 import '../../../styles/pages/createPetMateWizard.css';
-import { Dispatch, PropsWithoutRef } from 'react';
+import { Dispatch, PropsWithoutRef, useEffect, useState } from 'react';
+import Foods, { Food } from '../../../lib/Foods';
 
 interface AccessPointViewProps
 	extends PropsWithoutRef<JSX.IntrinsicElements['div']> {
 	setPetMateName: Dispatch<React.SetStateAction<string | null>>;
-	setFoodType: Dispatch<React.SetStateAction<string | null>>;
+	setFeederFoodId: Dispatch<React.SetStateAction<number | null>>;
 }
 
 const AccessPointView = ({
 	setPetMateName,
-	setFoodType,
+	setFeederFoodId,
 }: AccessPointViewProps) => {
+	const [foods, setFoods] = useState<Food[]>([]);
+
+
+	useEffect(() => {
+		(async () => await getFoods())();
+	}, []);
+
+	const getFoods = async () => {
+		const response = await Foods.index();
+		setFoods(response.data as Food[]);
+		setFeederFoodId(response.data[0].id)
+	}
+
 	return (
 		<>
 			<img className="petmateLogo" src="/assets/orange.png" alt="capybara" />
@@ -27,12 +42,10 @@ const AccessPointView = ({
 				</div>
 				<div className="foodTypeContainer">
 					<p>Food type</p>
-					<select className="foodTypes">
-						<option value="Cat Chow Adults">Cat Chow Adults</option>
-						<option value="Dog Chow Adults">Dog Chow Adults</option>
-						<option value="Kitten Chow">Kitten Chow</option>
-						<option value="Pedigree Adult">Pedigree Adult</option>
-						<option value="Pedigree Puppy">Pedigree Puppy</option>
+					<select className="foodTypes" defaultValue={foods.length && foods[0].id}>
+						{foods.map((food, i) => (
+							<option key={food.id} value={food.id}>{food.name}</option>
+						))}
 					</select>
 				</div>
 			</div>

@@ -6,12 +6,14 @@ import Alert from "./Alert";
 
 
 interface SettingsCardProps extends PropsWithoutRef<JSX.IntrinsicElements["div"]> {
-	hour: number;
-	minutes: number;
-	quantity: number
+	feedingTimeId: number;
+	hour: string;
+	minutes: string;
+	quantity: number;
+	onDelete: (id: number) => void;
 }
 
-const SettingsCard = ({ hour, minutes, quantity }: SettingsCardProps) => {
+const SettingsCard = ({ feedingTimeId, hour, minutes, quantity, onDelete }: SettingsCardProps) => {
 	const [deleteAlert, setDeleteAlert] = useState<boolean>(false);
 
 	return (
@@ -31,7 +33,11 @@ const SettingsCard = ({ hour, minutes, quantity }: SettingsCardProps) => {
 				title="Delete schedule"
 				body="Are you sure?"
 				primaryButtonText="Yes"
-				onClickPrimaryButton={() => setDeleteAlert(false)}
+				onClickPrimaryButton={() => {
+					setDeleteAlert(false);
+					onDelete(feedingTimeId)
+
+				}}
 				onClickSecondaryButton={() => setDeleteAlert(false)}
 				secondaryButtonText="No"
 			/>
