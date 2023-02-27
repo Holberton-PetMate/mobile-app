@@ -1,6 +1,6 @@
 import "../styles/components/bottomMenu.css";
 import { Alarm, Inbox, Stats } from "./Icons";
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 
 
 interface BottomMenuProps {
@@ -9,6 +9,7 @@ interface BottomMenuProps {
 
 const BottomMenu = ({ pageName }: BottomMenuProps) => {
 	const history = useHistory();
+	const params = useParams() as any;
 
 	return (
 		<>
@@ -16,19 +17,19 @@ const BottomMenu = ({ pageName }: BottomMenuProps) => {
 				<ul>
 					<li
 						className={`menuItem ${pageName === "settings" && ("active")}`}
-						onClick={() => history.push("/dashboard/1/settings")}
+						onClick={() => history.push(`/dashboard/${params.petmate_id}/settings`)}
 					>
 						<Alarm color="#EBEBED" />
 					</li>
 					<li
 						className={`menuItem ${pageName === "progress" && ("active")}`}
-						onClick={() => history.push("/dashboard/1/progress")}
+						onClick={() => history.push(`/dashboard/${params.petmate_id}/progress`)}
 					>
 						<Stats color="#EBEBED" />
 					</li>
 					<li
 						className={`menuItem ${pageName === "records" && ("active")}`}
-						onClick={() => history.push("/dashboard/1/records")}
+						onClick={() => history.push(`/dashboard/${params.petmate_id}/records`)}
 					>
 						<Inbox color="#EBEBED" />
 					</li>

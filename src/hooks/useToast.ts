@@ -14,7 +14,15 @@ const useToast = () => {
     isActive: false,
   });
 
-  return { toastData, setToastData };
+  const resetToast = () => {
+	setToastData({
+		message: "",
+		status: "error",
+		isActive: false,
+	});
+  }
+
+  return { toastData, setToastData, resetToast };
 };
 const [Provider, context] = constate(useToast);
 

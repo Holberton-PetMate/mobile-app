@@ -1,13 +1,28 @@
 .recordCard {
 	width: 100%;
-	padding: 1rem 0.5rem;
+	padding: 1rem 1rem;
     background: rgb(228, 226, 226);
     display: flex;
 	justify-content: space-between;
+	align-items: center;
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }
-.date, .notification {
-    width: 45%;
+.recordCard.red {
+	background-color: rgb(243, 179, 179);
+}
+.recordCard.green {
+	background-color: rgb(189, 241, 172);
+}
+.recordCard.yellow {
+	background-color: rgb(247, 248, 172);
+}
+.recordCard div {
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+}
+.notification {
+    width: 55%;
 }

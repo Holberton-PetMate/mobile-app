@@ -64,3 +64,7 @@
 .action-buttom:hover {
     opacity: 90%;
 }
+
+.action-buttom:disabled {
+	opacity: 50%;
+}

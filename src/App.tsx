@@ -34,6 +34,7 @@ import CreatePetMateWizard from "./pages/CreatePetMateWizard";
 setupIonicReact();
 
 const App: React.FC = () => {
+
 	return (
 		<SessionProvider>
 			<ToastProvider>
