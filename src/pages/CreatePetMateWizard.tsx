@@ -27,14 +27,14 @@ const CreatePetMateWizard: React.FC = () => {
 	const [feederName, setFeederName] = useState<string | null>(null);
 	const [feederFoodId, setFeederFoodId] = useState<number | null>(null);
 
-	const [step, setStep] = useState<number>(6);
+	const [step, setStep] = useState<number>(1);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [nextButtonDisabled, setNextButtonDisabled] = useState<boolean>(true);
 	const [networks, setNetworks] = useState<WifiProps[]>([]);
 	const [wifiSsid, setWifiSsid] = useState<string | null>(null);
 	const [wifiPassword, setWifiPassword] = useState<string | null>(null);
 
-	useEffect(() => {
+	useEffect(() => {									
 		console.log(feederFoodId)
 	}, [feederFoodId])
 
@@ -143,7 +143,7 @@ const CreatePetMateWizard: React.FC = () => {
 
 	// When we go to the next view
 	useEffect(() => {
-		if (step === 2) setTimeout(() => setNextButtonDisabled(false), 5000);
+		if (step === 2 || step === 5) setTimeout(() => setNextButtonDisabled(false), 5000);
 	}, [step]);
 
 	useEffect(() => {

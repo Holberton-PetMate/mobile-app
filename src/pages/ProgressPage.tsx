@@ -21,7 +21,7 @@ const ProgressPage: React.FC = () => {
 	const params = useParams() as any;
 	const toast = useToastContext();
 	const [loading, setLoading] = useState<boolean>(false);
-	const today: string = dayjs().format("YYYY-MM-DD");
+	const today: string = dayjs().add(-1, "day").format("YYYY-MM-DD");
 	const tomorrow: string = dayjs().add(1, "day").format("YYYY-MM-DD");
 	const [feedingRecords, setFeedingRecords] = useState<FeedingRecord[]>([]);
 	const [currentFeeder, setCurrentFeeder] = useState<FeederProps | null>(null);

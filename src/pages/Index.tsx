@@ -10,7 +10,8 @@ const Index = () => {
     (async () => {
       try {
         await initializeSession({ refetch: true });
-        router.push("/my-petmates");
+        router.push("/login");
+        // router.push("/my-petmates");
       } catch (error) {
         await clearSession();
         router.push("/login");
