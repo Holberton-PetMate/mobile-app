@@ -15,7 +15,8 @@ const NotificationList = ({ notifications }: { notifications: NotificationProps[
 			{notifications.map(item => (
 				<NotificationCard
 					date={item.created_at}
-					notification={item.msg}
+					msg={item.msg}
+					status={item.status}
 					key={item.id}
 				/>
 			))}

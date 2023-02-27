@@ -3,7 +3,7 @@ import ApiInstance from './Api';
 export interface NotificationProps {
 	id: number;
 	msg: string;
-	status: string;
+	status: "red" | "green" | "yellow"
 	created_at: string;
 	feeder_id: number;
 }
