@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import Layout from "../components/Layout";
 import PageHeading from "../components/PageHeading";
 import PetMateList from "../components/PetMateList";
@@ -15,19 +15,21 @@ const MyPetMatesPage: React.FC = () => {
 	const [feeders, setFeeders] = useState<FeederProps[]>([]);
 
 	useEffect(() => {
-		(async () => {
-			try {
-				setLoading(true);
-				const response = await FeedersApi.getFeeders()
-				setFeeders(response.data as FeederProps[])
-				setLoading(false);
-			} catch (err: any) {
-				setLoading(false);
-				console.log(err);
-			}
-		})()
-	}, [])
+		if (history.location.pathname === "/my-petmates")
+			getFeeders();
+	}, [history.location.pathname])
 
+	const getFeeders = async () => {
+		try {
+			setLoading(true);
+			const response = await FeedersApi.getFeeders()
+			setFeeders(response.data as FeederProps[])
+			setLoading(false);
+		} catch (err: any) {
+			setLoading(false);
+			console.log(err);
+		}
+	}
 	return (
 		<>
 			{loading && <Loader />}

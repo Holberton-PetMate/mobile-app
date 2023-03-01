@@ -2,21 +2,16 @@ import { useHistory, useParams } from "react-router";
 import { H1 } from "../components/fonts";
 import "../styles/pages/Login.css";
 import { useEffect } from "react";
+import React from "react";
+import { IonPage } from "@ionic/react";
 
 const Login: React.FC = () => {
 	const history = useHistory();
 	const params = useParams() as any;
 
-	useEffect(() => {
-		if (params.refreshed !== "1") {
-			setTimeout(() => {
-				console.log("reload")
-				history.push(`${history.location.pathname}?refreshed=1`);
-			}, 500);
-		}
-	}, [])
-	
+
 	return (
+		<IonPage>
 		<div className="loginContainer">
 			<img className="petmateLogo" src="/assets/blue.png" alt="capybara" />
 			<div className="formContainer">
@@ -51,6 +46,7 @@ const Login: React.FC = () => {
 				</div>
 			</div>
 		</div>
+		</IonPage>
 	);
 };
 
